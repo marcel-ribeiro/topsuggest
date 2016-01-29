@@ -1,9 +1,9 @@
 // Karma configuration
 // http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2016-01-27 using
+// Generated on 2016-01-29 using
 // generator-karma 1.0.1
 
-module.exports = function (config) {
+module.exports = function(config) {
   'use strict';
 
   config.set({
@@ -39,7 +39,8 @@ module.exports = function (config) {
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [
+    ],
 
     // web server port
     port: 8080,
