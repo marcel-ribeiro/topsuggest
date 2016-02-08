@@ -5,7 +5,7 @@ angular.module('shared.layout.footer', [])
     var footerDirective = {
       restrict: 'A',
       replace: true,
-      templateUrl: 'views/footer.html'
+      templateUrl: 'views/directives/footer.html'
     };
     return footerDirective;
   });
