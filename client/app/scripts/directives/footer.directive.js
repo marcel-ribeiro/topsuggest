@@ -1,7 +1,7 @@
 'use strict';
-angular.module('footer.directive', [])
+angular.module('shared.layout.footer', [])
 
-  .directive('footer', function () {
+  .directive('footerDirective', function () {
     var footerDirective = {
       restrict: 'A',
       replace: true,

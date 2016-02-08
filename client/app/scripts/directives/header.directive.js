@@ -1,11 +1,11 @@
 'use strict';
-angular.module('header.directive', [])
+angular.module('shared.layout.header', [])
 
-  .directive('header', function () {
-    var footerDirective = {
+  .directive('headerDirective', function () {
+    var headerDirective = {
       restrict: 'A',
       replace: true,
       templateUrl: 'views/header.html'
     };
-    return footerDirective;
+    return headerDirective;
   });
