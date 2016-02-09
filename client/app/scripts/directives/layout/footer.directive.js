@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('shared.layout.footer', ['controllers.layout.footer'])
+angular.module('directives.layout.footer', ['controllers.layout.footer'])
 
   .directive('footerDirective', function () {
     var footerDirective = {

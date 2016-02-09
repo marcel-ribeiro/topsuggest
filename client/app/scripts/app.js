@@ -17,8 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'shared.layout.header',
-    'shared.layout.footer'
+    'directives.layout.header',
+    'directives.layout.footer'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider) {

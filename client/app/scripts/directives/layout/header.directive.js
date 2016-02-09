@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('shared.layout.header', [])
+angular.module('directives.layout.header', [])
 
   .directive('headerDirective', function () {
     var headerDirective = {
