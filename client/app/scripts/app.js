@@ -8,6 +8,13 @@
  *
  * Main module of the application.
  */
+//var translations = {
+//  HEADLINE: 'What an awesome module!',
+//  PARAGRAPH: 'Srsly!',
+//  PASSED_AS_TEXT: 'Hey there! I\'m passed as text value!',
+//  PASSED_AS_ATTRIBUTE: 'I\'m passed as attribute value, cool ha?',
+//  PASSED_AS_INTERPOLATION: 'Beginners! I\'m interpolated!'
+//};
 angular
   .module('clientApp', [
     'ngAnimate',
@@ -17,9 +24,25 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
+    'constants.translate',
+    'pascalprecht.translate',
     'directives.layout.header',
     'directives.layout.footer'
   ])
+
+  .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, LOCALES) {
+
+    $translateProvider
+      .useStaticFilesLoader({
+        prefix: PREFIX_LOCALES,
+        suffix: SUFFIX_LOCALES
+      })
+      .registerAvailableLanguageKeys(['en', 'pt', 'de'], LOCALES)
+      .preferredLanguage('en')
+      .fallbackLanguage('en')
+      .determinePreferredLanguage()
+      .useSanitizeValueStrategy('escapeParameters');
+  })
 
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
