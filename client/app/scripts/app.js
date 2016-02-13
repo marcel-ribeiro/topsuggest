@@ -65,11 +65,11 @@ angular
         }
       })
 
-      .state('help', {
-        url: '/help',
+      .state('support', {
+        url: '/support',
         views: {
           'content': {
-            templateUrl: 'views/help.html'
+            templateUrl: 'views/support.html'
           }
         }
       });

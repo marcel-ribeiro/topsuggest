@@ -1,6 +1,6 @@
 angular.module('constants.translate', [])
 
-  .constant('PREFIX_LOCALES', 'scripts/constants/translate/locales/')
+  .constant('PREFIX_LOCALES', 'resources/locales/')
   .constant('SUFFIX_LOCALES', '.json')
   .constant('LOCALES', {
     'en': 'en', 'en_GB': 'en', 'en_US': 'en',

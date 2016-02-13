@@ -1,7 +1,7 @@
 {
   "APP_NAME": "Old Panda",
   "MENU": {
-    "ABOUT": "ABOUT",
-    "HELP": "HELP"
+    "ABOUT": "About",
+    "SUPPORT": "Support"
   }
 }
