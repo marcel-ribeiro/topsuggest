@@ -2,6 +2,36 @@
   "APP_NAME": "Old Panda",
   "MENU": {
     "ABOUT": "About",
-    "SUPPORT": "Support"
+    "SUPPORT": "Support",
+    "CONTACT": "Contact"
+  },
+  "FOOTER": {
+    "HEADERS": {
+      "ABOUT": "About",
+      "SUPPORT": "Support",
+      "SOCIAL": "Social",
+      "NEWS_LETTER": "News letter"
+    },
+    "ABOUT": {
+      "ITEMS": {
+        "OLD_PANDA": "Old Panda",
+        "SUGGESTIONS": "Suggestions",
+        "LEGAL": "Legal",
+        "ADVERTISE": "Advertise"
+      }
+    },
+    "SUPPORT": {
+      "ITEMS": {
+        "SUPPORT_HOME": "Support Home",
+        "COMMUNITY": "Community"
+      }
+    },
+    "SOCIAL": {
+      "ITEMS": {
+        "FACEBOOK": "Facebook",
+        "TWITTER": "Twitter",
+        "GOOGLE_PLUS": "Google +"
+      }
+    }
   }
 }

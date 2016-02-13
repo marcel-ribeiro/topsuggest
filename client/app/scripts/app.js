@@ -51,7 +51,7 @@ angular
         url: '/main',
         views: {
           'content': {
-            templateUrl: 'views/main.html'
+            templateUrl: 'views/main.view.html'
           }
         }
       })
@@ -60,7 +60,7 @@ angular
         url: '/about',
         views: {
           'content': {
-            templateUrl: 'views/about.html'
+            templateUrl: 'views/about.view.html'
           }
         }
       })
@@ -69,7 +69,16 @@ angular
         url: '/support',
         views: {
           'content': {
-            templateUrl: 'views/support.html'
+            templateUrl: 'views/support.view.html'
+          }
+        }
+      })
+
+      .state('contact', {
+        url: '/contact',
+        views: {
+          'content': {
+            templateUrl: 'views/contact.view.html'
           }
         }
       });
