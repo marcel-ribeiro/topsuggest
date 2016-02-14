@@ -1,0 +1,38 @@
+.navbar {
+  .navbar-nav > li > a, .navbar-brand {
+    color: $navbar-default-link-color;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $navbar-default-link-hover-color;
+      background-color: $navbar-default-bg-hover;
+    }
+  }
+
+  .navbar-brand {
+    color: $navbar-default-link-color;
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $navbar-default-bg;
+    }
+
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    text-align: center;
+  }
+
+  .navbar-center {
+    display: inline-block;
+    float: none;
+    margin: 0;
+  }
+
+  .navbar-nav > li {
+    height: 45px;
+  }
+}
+
