@@ -23,10 +23,6 @@
     @include button-variant($btn-navbar-color, $btn-navbar-bg, $btn-navbar-border);
   }
 
-  //.navbar
-  //.navbar-form .form-control
-
-
 }
 
 @media (min-width: 768px) {
@@ -45,47 +41,23 @@
   }
 }
 
-//.search {
-//  padding: 5px 0;
-//  width: 230px;
-//  height: 30px;
-//  position: relative;
-//  left: 10px;
-//  float: left;
-//  line-height: 22px;
-//}
-
-//.search input {
-//  position: absolute;
-//  width: 0px;
-//  float: Left;
-//  margin-left: 210px;
-//  -webkit-transition: all 0.7s ease-in-out;
-//  -moz-transition: all 0.7s ease-in-out;
-//  -o-transition: all 0.7s ease-in-out;
-//  transition: all 0.7s ease-in-out;
-//  height: 30px;
-//  line-height: 18px;
-//  padding: 0 2px 0 2px;
-//  border-radius:1px;
-//}
-
-.search input {
-  position: relative;
-  //width: 0px !important;
-  float: left;
-  margin-left: 0px;
-  //-webkit-transition: all 0.7s ease-in-out;
-  //-moz-transition: all 0.7s ease-in-out;
-  //-o-transition: all 0.7s ease-in-out;
-  //transition: all 0.7s ease-in-out;
-  //  height: 30px;
-  //  line-height: 18px;
-  //  padding: 0 2px 0 2px;
-  //  border-radius:1px;
+.navbar-collapse form[role="search"] .input-group {
+  width: 60%;
+  position: absolute;
+  top: 0px;
+  right: 20%;
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
 }
 
-.search:hover input, .search input:focus {
-  width: 800px;
-  //margin-left: -100%;
+.navbar-collapse form[role="search"] input {
+  padding: 8px 12px;
+  border-radius: 0px;
+  border-width: 0px;
+  background-color: $navbar-default-bg-hover;
+  color: $navbar-default-link-color;
+  box-shadow: none;
+  outline: none;
+  height: 50px;
 }
