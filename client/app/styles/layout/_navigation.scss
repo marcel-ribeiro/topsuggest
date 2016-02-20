@@ -39,25 +39,30 @@
   .navbar-nav > li {
     height: 45px;
   }
+
+  .navbar-icons {
+    padding-top: 6px;
+  }
+
+  .navbar-collapse form[role="search"] .input-group {
+    width: 60%;
+    position: absolute;
+    top: 0px;
+    right: 20%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 0;
+  }
+
+  .navbar-collapse form[role="search"] input {
+    padding: 8px 12px;
+    border-radius: 0px;
+    border-width: 0px;
+    background-color: $navbar-default-bg-hover;
+    color: $navbar-default-link-color;
+    box-shadow: none;
+    outline: none;
+    height: 50px;
+  }
 }
 
-.navbar-collapse form[role="search"] .input-group {
-  width: 60%;
-  position: absolute;
-  top: 0px;
-  right: 20%;
-  padding: 0px;
-  margin: 0px;
-  z-index: 0;
-}
-
-.navbar-collapse form[role="search"] input {
-  padding: 8px 12px;
-  border-radius: 0px;
-  border-width: 0px;
-  background-color: $navbar-default-bg-hover;
-  color: $navbar-default-link-color;
-  box-shadow: none;
-  outline: none;
-  height: 50px;
-}
