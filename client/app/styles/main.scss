@@ -6,6 +6,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 /* base bootstrap official */
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
 // endbower
 
 /* base */
@@ -15,6 +16,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 /* modules */
 @import "modules/blocks";
 @import "modules/buttons";
+@import "modules/icons";
 
 /* layout */
 @import "layout/header";

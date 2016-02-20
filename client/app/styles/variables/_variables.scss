@@ -1,3 +1,6 @@
+/* setup path for font-awesome */
+$fa-font-path: "/bower_components/font-awesome/fonts" !default;
+
 /* navbar */
 $navbar-default-bg: #3e454c !default;
 $navbar-default-bg-hover: #2d3237 !default;
@@ -13,7 +16,8 @@ $btn-navbar-border: #3e454c !default;
 $footer-bg-color: #f2f2f2 !default;
 $footer-text-color: #999999 !default;
 $footer-link-color: #999999 !default;
-$footer-header-color: #999999 !default;
+$footer-header-color: #205D7A !default;
 $footer-border-color: #DDDDDD !default;
 $footer-bottom-bg-color: #f2f2f2 !default;
-$footer-bottom-bg-color: #f2f2f2 !default;
+$footer-social-icons-bg-color: #205D7A !default;
+$footer-social-icons-content-color: #fff !default;
