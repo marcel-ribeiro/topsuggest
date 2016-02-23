@@ -2,16 +2,31 @@
 $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
 /* navbar */
-$navbar-default-bg: #3e454c !default;
-$navbar-default-bg-hover: #2d3237 !default;
-$navbar-default-link-color: #fff !default;
-$navbar-default-link-hover-color: #fff !default;
-$navbar-default-link-active-color: #fff !default;
+//$navbar-default-bg: #242424 !default;
+//$navbar-default-bg-hover: #242424 !default;
+//$navbar-default-link-color: #fff !default;
+//$navbar-default-link-hover-color: #fff !default;
+//$navbar-default-link-active-color: #fff !default;
+$navbar-height: 120px !default;
+$nav-link-padding: 100px;
+//
 
-$btn-navbar-color: #fff !default;
-$btn-navbar-bg: #3e454c !default;
-$btn-navbar-border: #3e454c !default;
+//=== Inverted navbar
+// Reset inverted navbar basics
+$navbar-inverse-color: #fff !default;
+$navbar-inverse-bg: #333 !default;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
 
+// Inverted navbar links
+$navbar-inverse-link-color: #fff !default;
+$navbar-inverse-link-hover-color: darken($navbar-inverse-link-color, 15%) !default;
+$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
+$navbar-inverse-link-active-bg: $navbar-inverse-bg !default;
+
+//$btn-navbar-color: #fff !default;
+//$btn-navbar-bg: #242424 !default;
+//$btn-navbar-border: #242424 !default;
+//
 /*footer*/
 $footer-bg-color: #f2f2f2 !default;
 $footer-text-color: #999999 !default;
