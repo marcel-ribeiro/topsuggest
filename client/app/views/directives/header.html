@@ -55,18 +55,21 @@
     <!-- /.container-fluid -->
   </div>
   <!-- /.navbar -->
-  <div class="search-bar" ng-if="app.display.searchBar">
+  <!--<div class="search-bar" ng-if="app.display.searchBar">-->
+  <div class="search-bar">
     <div class="container">
-      <form class="navbar-form navbar-right" role="search">
-        <button class="btn btn-navbar" ng-hide="searchExpand" ng-click="searchExpand = true"><i
-          class="glyphicon glyphicon-search gly-spin"></i></button>
+      <form role="search">
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button class="btn btn-search-bar no-glow"><i class="glyphicon glyphicon-search gly-spin no-glow"></i>
+            </button>
+          </div>
+          <input type="text" class="form-control no-glow" maxlength="100" placeholder="Search"/>
 
-        <div class="input-group" ng-show="searchExpand">
-          <input type="text" class="form-control" maxlength="100" placeholder="Search"/>
-            <span class="input-group-btn">
-              <button class="btn btn-navbar" ng-click="searchExpand = false"><i
-                class="glyphicon glyphicon-remove gly-spin"></i></button>
-               </span>
+          <div class="input-group-btn">
+            <button class="btn btn-search-bar no-glow"><i class="glyphicon glyphicon-remove gly-spin no-glow"></i>
+            </button>
+          </div>
         </div>
       </form>
     </div>

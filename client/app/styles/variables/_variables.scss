@@ -2,20 +2,13 @@
 $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
 /* header */
-/* navbar */
-//$navbar-default-bg: #242424 !default;
-//$navbar-default-bg-hover: #242424 !default;
-//$navbar-default-link-color: #fff !default;
-//$navbar-default-link-hover-color: #fff !default;
-//$navbar-default-link-active-color: #fff !default;
 $navbar-height: 120px !default;
 $nav-link-padding: 100px;
-//
 
 //=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color: #fff !default;
-$navbar-inverse-bg: #333 !default;
+$navbar-inverse-bg: #242424 !default;
 $navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
@@ -27,12 +20,15 @@ $navbar-inverse-link-active-bg: $navbar-inverse-bg !default;
 
 /* search-bar */
 $search-bar-height: $navbar-height !default;
-$search-bar-bg: lighten($navbar-inverse-bg, 10%) !default;
-$search-bar-padding-vertical: floor(($search-bar-height) / 2) !default;
+$search-bar-bg: $navbar-inverse-bg !default;
+$search-bar-input-height: 50px !default;
+$search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
 
-  //$btn-navbar-color: #fff !default;
-//$btn-navbar-bg: #242424 !default;
-//$btn-navbar-border: #242424 !default;
+//btn-search-bar
+$btn-search-bar-color: #fff !default;
+$btn-search-bar-bg: transparent !default;
+$btn-search-bar-border: transparent !default;
+
 //
 /*footer*/
 $footer-bg-color: #f2f2f2 !default;

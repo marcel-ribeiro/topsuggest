@@ -9,6 +9,7 @@
   top: 0px;
   z-index: 0;
   margin: 0px;
+  width: 100%;
   height: $search-bar-height;
   background-color: $search-bar-bg;
 }
@@ -25,8 +26,28 @@
   height: 0px;
 }
 
+.search-bar {
+  .container {
+    text-align: center;
+  }
+  form {
+    //background-color: black;
+    margin-top: $search-bar-padding-vertical;
+    border-bottom: solid 2px #727071;
+  }
+  input {
+    background-color: transparent;
+    border: 0px solid;
+    outline: none;
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: 0.02em;
+    padding: 0 15px 5px 35px;
+    width: 95%;
+    height: $search-bar-input-height;
+  }
+}
 
-.search-bar form{
-  background-color: yellow;
-  margin-top: $search-bar-padding-vertical;
+.btn-search-bar {
+  @include button-variant($btn-search-bar-color, $btn-search-bar-bg, $btn-search-bar-border);
 }
