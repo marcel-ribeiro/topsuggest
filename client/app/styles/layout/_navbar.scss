@@ -11,3 +11,31 @@
     margin: 0;
   }
 }
+
+.language li a {
+  color: #ababab;
+  font-size: 14px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.language li {
+  border: 1px solid #9b9a9b;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  min-width: 30px;
+  text-align: center;
+}
+
+.global-language .all-languages {
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #e0e0e0;
+  //display: none;
+  position: absolute;
+  //right: -25px;
+  top: 50px;
+  z-index: 2;
+  list-style: none;
+}

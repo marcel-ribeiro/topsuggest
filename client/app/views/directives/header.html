@@ -1,7 +1,7 @@
 <header>
 
   <div class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -33,6 +33,26 @@
             </a>
           </li>
         </ul>
+
+        <div class="navbar-right">
+          <div class="global-language">
+            <ul class="language">
+              <!-- <li class="active-language"><a class="active" href="#">EN</a></li> -->
+
+              <li><a href="#"
+                     ng-click="app.display.navbar.languagesDropdown = !app.display.navbar.languagesDropdown">EN</a></li>
+
+            </ul>
+            <ul class="all-languages" ng-show="app.display.navbar.languagesDropdown"
+                ng-class="{'pullDown': app.display.navbar.languagesDropdown, 'collapseUp': !app.display.navbar.languagesDropdown}">
+              <li><a href="/use-cases">English</a></li>
+              <li><a href="/fr/use-cases">French</a></li>
+              <li><a href="/de/use-cases">German</a></li>
+              <li><a href="/jp/use-cases">Japanese</a></li>
+              <li><a href="/kr/use-cases">Korean</a></li>
+            </ul>
+          </div>
+        </div>
 
         <form class="navbar-form navbar-right" role="search">
           <button class="btn btn-navbar" ng-click="app.display.searchBar=true"><i class="fa fa-search fa-2x"></i>
