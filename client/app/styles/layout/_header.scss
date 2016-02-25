@@ -1,10 +1,4 @@
 .search-bar {
-  -webkit-transition: linear 0.5s;
-  -moz-transition: linear 0.5s;
-  -ms-transition: linear 0.5s;
-  -o-transition: linear 0.5s;
-  transition: linear 0.5s;
-
   position: absolute;
   top: 0px;
   z-index: 0;
@@ -12,18 +6,6 @@
   width: 100%;
   height: $search-bar-height;
   background-color: $search-bar-bg;
-}
-.search-bar.ng-enter{
-  height: 0px;
-}
-.search-bar.ng-enter-active{
-  height: $navbar-height;
-}
-.search-bar.ng-leave{
-  height: $navbar-height;
-}
-.search-bar.ng-leave-active{
-  height: 0px;
 }
 
 .search-bar {
@@ -48,6 +30,6 @@
   }
 }
 
-.btn-search-bar {
+.btn-search-bar, .btn-navbar {
   @include button-variant($btn-search-bar-color, $btn-search-bar-bg, $btn-search-bar-border);
 }

@@ -35,16 +35,8 @@
         </ul>
 
         <form class="navbar-form navbar-right" role="search">
-          <button class="btn btn-navbar" ng-hide="searchExpand" ng-click="searchExpand = true"><i
-            class="glyphicon glyphicon-search gly-spin"></i></button>
-
-          <div class="input-group" ng-show="searchExpand">
-            <input type="text" class="form-control" maxlength="100" placeholder="Search"/>
-            <span class="input-group-btn">
-              <button class="btn btn-navbar" ng-click="searchExpand = false"><i
-                class="glyphicon glyphicon-remove gly-spin"></i></button>
-               </span>
-          </div>
+          <button class="btn btn-navbar" ng-click="app.display.searchBar=true"><i class="fa fa-search fa-2x"></i>
+          </button>
         </form>
 
       </div>
@@ -55,27 +47,25 @@
     <!-- /.container-fluid -->
   </div>
   <!-- /.navbar -->
-  <!--<div class="search-bar" ng-if="app.display.searchBar">-->
-  <div class="search-bar" ng-class="myVar">
+
+  <div class="search-bar" ng-show="app.display.searchBar"
+       ng-class="{'pullDown': app.display.searchBar, 'collapseUp': !app.display.searchBar}">
     <div class="container">
       <form role="search">
         <div class="input-group">
           <div class="input-group-btn">
-            <button class="btn btn-search-bar no-glow"><i class="glyphicon glyphicon-search gly-spin no-glow"></i>
-            </button>
+            <button class="btn btn-search-bar no-glow"><i class="fa fa-search fa-3x"></i></button>
           </div>
           <input type="text" class="form-control no-glow" maxlength="100" placeholder="Search"/>
 
           <div class="input-group-btn">
-            <button class="btn btn-search-bar no-glow"><i class="glyphicon glyphicon-remove gly-spin no-glow"></i>
+            <button class="btn btn-search-bar no-glow" ng-click="app.display.searchBar=false"><i
+                class="fa fa-times fa-3x"></i>
             </button>
           </div>
         </div>
       </form>
     </div>
   </div>
-
-  <button class="btn" ng-click="app.display.searchBar=!app.display.searchBar">Display search bar</button>
-  <button class="btn" ng-click="myVar='slideDown'">Display search bar with ng-class</button>
 
 </header><!-- /header -->
