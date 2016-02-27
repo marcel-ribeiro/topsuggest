@@ -1,5 +1,29 @@
 .navbar {
   border-radius: 0px !important;
+  .container {
+    border-bottom: .1rem solid hsla(0, 0%, 100%, .3);
+  }
+
+  //uncollapsed nav
+  @media (min-width: $grid-float-breakpoint) {
+    .navbar-nav {
+      > li > a {
+        &:hover,
+        &:focus {
+          color: $navbar-inverse-link-hover-color;
+          border-bottom: .4rem solid $navbar-inverse-link-active-border-color;
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $navbar-inverse-link-active-color;
+          border-bottom: .4rem solid $navbar-inverse-link-active-border-color;
+        }
+      }
+    }
+  }
 
   //.navbar-collapse.collapse {
   //  text-align: center;

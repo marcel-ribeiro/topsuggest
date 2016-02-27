@@ -11,16 +11,20 @@ $navbar-inverse-color: #fff !default;
 $navbar-inverse-bg: #242424 !default;
 $navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-link-color: #fff !default;
-$navbar-inverse-link-hover-color: darken($navbar-inverse-link-color, 15%) !default;
+$navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
 $navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg: $navbar-inverse-bg !default;
+$navbar-inverse-link-active-bg: transparent !default;
+$navbar-inverse-link-active-border-color: $navbar-inverse-link-active-color;
+$navbar-padding-vertical: 55px;
 
 //==search-bar
-$search-bar-height: $navbar-height !default;
+$search-bar-height: $navbar-height+15 !default;
 $search-bar-bg: $navbar-inverse-bg !default;
 $search-bar-input-height: 50px !default;
 $search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
-$search-bar-zindex: 1100;
+$search-bar-input-color: #fff !default;
+$search-bar-border: #727071 !default;
+$search-bar-zindex: 1100 !default;
 //===btn-search-bar
 $btn-search-bar-color: #fff !default;
 $btn-search-bar-bg: transparent !default;
