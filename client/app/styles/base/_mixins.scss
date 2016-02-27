@@ -1,0 +1,66 @@
+/* Animation mixing */
+
+@mixin animation($animaion-definition) {
+  -webkit-animation: #{$animaion-definition};
+  -moz-animation: #{$animaion-definition};
+  -ms-animation: #{$animaion-definition};
+  -o-animation: #{$animaion-definition};
+  animation: #{$animaion-definition};
+}
+
+@mixin keyframes($animation-name) {
+  //@-webkit-keyframes #{$animation-name} {
+  //  @content;
+  //}
+  //@-moz-keyframes #{$animation-name} {
+  //  @content;
+  //}
+  //@-ms-keyframes #{$animation-name} {
+  //  @content;
+  //}
+  //@-o-keyframes #{$animation-name} {
+  //  @content;
+  //}
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/* Generate slide show */
+@mixin generate-slideshow-animation($number-images, $class, $duration-per-slide) {
+
+  $totalDuration: $duration-per-slide * $number-images;
+  $totalFramesVisible: ceil(10 / $number-images);
+  $lastVisible: 0;
+
+  @for $i from 1 through $number-images {
+    .#{$class}-#{$i} {
+      @include animation(#{$class}-#{$i} #{$totalDuration} infinite);
+      //animation: #{$class}-#{$i} #{$totalDuration} infinite;
+      //-o-animation: #{$class}-#{$i} #{$totalDuration} infinite;
+      //-moz-animation: #{$class}-#{$i} #{$totalDuration} infinite;
+      //-webkit-animation: #{$class}-#{$i} #{$totalDuration} infinite;
+    }
+
+    @include keyframes(#{$class}-#{$i}) {
+      $countFramesVisible: 0;
+      @for $keyframe from 0 through 10 {
+        $opacity: 0;
+
+        @if ($countFramesVisible < $totalFramesVisible and $keyframe > $lastVisible) {
+          $opacity: 1;
+          $lastVisible: $keyframe;
+          $countFramesVisible: $countFramesVisible + 1;
+        }
+        @if ($i == $number-images and $keyframe == 0) {
+          $opacity: 1;
+        }
+
+        #{$keyframe * 10%} {
+          opacity: #{$opacity};
+        }
+      }
+
+    }
+  }
+}

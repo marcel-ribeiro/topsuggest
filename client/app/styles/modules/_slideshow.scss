@@ -1,0 +1,19 @@
+/* slideshow frame */
+#show {
+  width: 520px;
+  position: relative;
+  height: 420px;
+}
+
+#show .slide {
+  border: 10px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+@include generate-slideshow-animation(3, 'slide', 10s);
