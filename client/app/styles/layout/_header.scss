@@ -1,7 +1,7 @@
 .search-bar {
   position: absolute;
   top: 0px;
-  z-index: 0;
+  z-index: $search-bar-zindex;
   margin: 0px;
   width: 100%;
   height: $search-bar-height;
@@ -13,7 +13,6 @@
     text-align: center;
   }
   form {
-    //background-color: black;
     margin-top: $search-bar-padding-vertical;
     border-bottom: solid 2px #727071;
   }

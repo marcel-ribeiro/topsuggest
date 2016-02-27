@@ -1,37 +1,36 @@
 /* setup path for font-awesome */
 $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
-/* header */
+//=header
+//$font-size-base: 20px !default;
 $navbar-height: 120px !default;
-$font-size-base: 20px !default;
-//$nav-link-padding: 100px;
+$navbar-margin-bottom: 0 !default;
 
-//=== Inverted navbar
-// Reset inverted navbar basics
+//==navbar
 $navbar-inverse-color: #fff !default;
 $navbar-inverse-bg: #242424 !default;
 $navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
-
-// Inverted navbar links
 $navbar-inverse-link-color: #fff !default;
 $navbar-inverse-link-hover-color: darken($navbar-inverse-link-color, 15%) !default;
 $navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg: $navbar-inverse-bg !default;
 
-
-/* search-bar */
+//==search-bar
 $search-bar-height: $navbar-height !default;
 $search-bar-bg: $navbar-inverse-bg !default;
 $search-bar-input-height: 50px !default;
 $search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
-
-//btn-search-bar
+$search-bar-zindex: 1100;
+//===btn-search-bar
 $btn-search-bar-color: #fff !default;
 $btn-search-bar-bg: transparent !default;
 $btn-search-bar-border: transparent !default;
 
-//
-/*footer*/
+//=main
+//==slideshow
+$main-slideshow-height: 800px !default;
+
+//=footer
 $footer-bg-color: #f2f2f2 !default;
 $footer-text-color: #999999 !default;
 $footer-link-color: #999999 !default;
