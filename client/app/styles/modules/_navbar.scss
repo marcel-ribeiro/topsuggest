@@ -36,6 +36,12 @@
   //}
 }
 
+.navbar-gap {
+  //height: $navbar-gap-height;
+  margin-bottom: $navbar-gap-height;
+  background-color: #000066;
+}
+
 .language li a {
   color: #ababab;
   font-size: 14px;

@@ -15,7 +15,8 @@ $navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
 $navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg: transparent !default;
 $navbar-inverse-link-active-border-color: $navbar-inverse-link-active-color;
-$navbar-padding-vertical: 55px;
+$navbar-padding-vertical: 55px !default;
+$navbar-gap-height: $navbar-height + 15 !default;
 
 //==search-bar
 $search-bar-height: $navbar-height+15 !default;
