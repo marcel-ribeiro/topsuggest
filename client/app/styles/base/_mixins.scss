@@ -29,13 +29,13 @@
 /* Generate slide show */
 @mixin generate-slideshow-animation($number-images, $class, $duration-per-slide) {
 
-  $totalDuration: $duration-per-slide * $number-images;
-  $totalFramesVisible: ceil(10 / $number-images);
-  $lastVisible: 0;
+  $total-duration: $duration-per-slide * $number-images;
+  $total-frames-visible: ceil(10 / $number-images);
+  $last-frame-visible: -1;
 
   @for $i from 1 through $number-images {
     .#{$class}-#{$i} {
-      @include animation(#{$class}-#{$i} #{$totalDuration} infinite);
+      @include animation(#{$class}-#{$i} #{$total-duration} infinite);
       //animation: #{$class}-#{$i} #{$totalDuration} infinite;
       //-o-animation: #{$class}-#{$i} #{$totalDuration} infinite;
       //-moz-animation: #{$class}-#{$i} #{$totalDuration} infinite;
@@ -43,14 +43,14 @@
     }
 
     @include keyframes(#{$class}-#{$i}) {
-      $countFramesVisible: 0;
+      $count-frames-visible: 0;
       @for $keyframe from 0 through 10 {
         $opacity: 0;
 
-        @if ($countFramesVisible < $totalFramesVisible and $keyframe > $lastVisible) {
+        @if ($count-frames-visible < $total-frames-visible and $keyframe > $last-frame-visible) {
           $opacity: 1;
-          $lastVisible: $keyframe;
-          $countFramesVisible: $countFramesVisible + 1;
+          $last-frame-visible: $keyframe;
+          $count-frames-visible: $count-frames-visible + 1;
         }
         @if ($i == $number-images and $keyframe == 0) {
           $opacity: 1;
