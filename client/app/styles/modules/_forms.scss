@@ -1,4 +1,5 @@
-.no-glow:focus {
+//remove the glowing border of form items on focus
+.form-control:focus, input:focus, button:focus {
   box-shadow: none !important;
   outline: 0 none !important;
 }

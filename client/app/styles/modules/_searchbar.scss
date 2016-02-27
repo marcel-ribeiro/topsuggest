@@ -1,0 +1,28 @@
+.search-bar {
+  position: fixed;
+  top: 0px;
+  margin: 0px;
+  z-index: $search-bar-zindex;
+  width: 100%;
+  height: $search-bar-height;
+  background-color: $search-bar-bg;
+
+  .container {
+    text-align: center;
+  }
+  form {
+    margin-top: $search-bar-padding-vertical;
+    border-bottom: solid 2px $search-bar-border;
+  }
+  input {
+    background-color: transparent;
+    border: 0px solid;
+    outline: none;
+    color: $search-bar-input-color;
+    font-size: 1.5em;
+    letter-spacing: 0.02em;
+    padding: 0 15px 5px 35px;
+    width: 95%;
+    height: $search-bar-input-height;
+  }
+}

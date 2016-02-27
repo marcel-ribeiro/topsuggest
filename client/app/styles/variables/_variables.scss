@@ -25,10 +25,12 @@ $search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-heig
 $search-bar-input-color: #fff !default;
 $search-bar-border: #727071 !default;
 $search-bar-zindex: 1100 !default;
-//===btn-search-bar
-$btn-search-bar-color: #fff !default;
-$btn-search-bar-bg: transparent !default;
-$btn-search-bar-border: transparent !default;
+
+//=components
+//==components.btn
+$btn-transparent-icon-color: #fff !default;
+$btn-transparent-icon-bg: transparent !default;
+$btn-transparent-icon-border: transparent !default;
 
 //=main
 //==slideshow

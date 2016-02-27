@@ -1,0 +1,3 @@
+.btn-transparent-icon {
+  @include button-variant($btn-transparent-icon-color, $btn-transparent-icon-bg, $btn-transparent-icon-border);
+}

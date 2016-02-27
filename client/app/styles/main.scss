@@ -20,8 +20,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "modules/buttons";
 @import "modules/icons";
 @import "modules/slideshow";
+@import "modules/searchbar";
 
 /* layout */
 @import "layout/header";
-@import "layout/navbar";
+@import "modules/navbar";
 @import "layout/footer";
