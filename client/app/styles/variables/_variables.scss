@@ -1,12 +1,27 @@
 /* setup path for font-awesome */
 $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
+//=base
+$font-family-benton-sans: Benton Sans, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: $font-family-benton-sans !default;
+$base-font-size: 14px;
+$base-font-size-s: ceil(($base-font-size * 0.85)) !default;
+//~12px
+$base-font-size-m: ceil(($base-font-size * 1.25)) !default;
+// ~18px
+$base-font-size-l: ceil(($base-font-size * 1.50)) !default;
+// ~21px
+$base-font-size-xl: ceil(($base-font-size * 1.75)) !default;
+// ~25px
+$base-font-weight-light: 100 !default;
+
 //=header
 //$font-size-base: 20px !default;
 $navbar-height: 120px !default;
 $navbar-margin-bottom: 0 !default;
 
 //==navbar
+$navbar-font-size: $base-font-size-xl !default;
 $navbar-inverse-color: #fff !default;
 $navbar-inverse-bg: #242424 !default;
 $navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;

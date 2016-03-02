@@ -1,7 +1,13 @@
 .navbar {
   border-radius: 0px !important;
+  font-size: $navbar-font-size;
+
   .container {
     border-bottom: .1rem solid hsla(0, 0%, 100%, .3);
+  }
+
+  .navbar-brand {
+    font-size: $navbar-font-size;
   }
 
   //uncollapsed nav
