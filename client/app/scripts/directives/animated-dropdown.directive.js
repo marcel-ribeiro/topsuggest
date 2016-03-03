@@ -9,10 +9,10 @@
  *
  *
  */
-angular.module("effects.dropdown", [])
+angular.module("directives.animated-dropdown", [])
 
 
-  .directive('opDropdown', function () {
+  .directive('opAnimatedDropdown', function () {
     // Custom function to read dropdown data
     function dropdownEffectData(target) {
       // @todo - page level global?

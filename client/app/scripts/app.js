@@ -21,7 +21,7 @@ angular
     'pascalprecht.translate',
     'directives.layout.header',
     'directives.layout.footer',
-    'effects.dropdown'
+    'directives.animated-dropdown'
   ])
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, LOCALES) {
