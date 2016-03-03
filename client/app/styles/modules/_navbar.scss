@@ -52,30 +52,19 @@
   background-color: #000066;
 }
 
-.language li a {
-  color: #ababab;
-  font-size: 14px;
-  padding: 5px;
-  text-decoration: none;
+.btn-language {
+  border: .1rem solid hsla(0, 0%, 100%, .6);
+  border-radius: 1.7rem;
+  line-height: 0;
+  padding: 1.7rem 2rem 1.5rem;
+  transition: background-color .4s, border-color .4s;
+  color: #fff;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: transparent;
 }
 
-.language li {
-  border: 1px solid #9b9a9b;
-  border-radius: 50%;
-  display: inline-block;
-  float: left;
-  margin: 0;
-  min-width: 30px;
-  text-align: center;
-}
-
-.global-language .all-languages {
-  background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #e0e0e0;
-  //display: none;
-  position: absolute;
-  //right: -25px;
-  top: 50px;
-  z-index: 2;
-  list-style: none;
+.btn-language:hover {
+  background-color: hsla(0, 0%, 100%, .1);
 }
