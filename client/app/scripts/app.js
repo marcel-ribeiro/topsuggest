@@ -17,6 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
+    'ui.scrollpoint',
     'constants.translate',
     'pascalprecht.translate',
     'directives.layout.header',

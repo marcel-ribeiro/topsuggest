@@ -43,9 +43,15 @@
 }
 
 .navbar-transparent {
+  transition: background-color 1s ease;
   background-color: transparent;
   border: none;
 }
+
+.navbar-transparent.ui-scrollpoint {
+  background-color: $navbar-inverse-bg;
+}
+
 .navbar-gap {
   //height: $navbar-gap-height;
   margin-bottom: $navbar-gap-height;
