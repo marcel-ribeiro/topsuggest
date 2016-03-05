@@ -53,11 +53,10 @@
 }
 
 .navbar-gap {
-  //height: $navbar-gap-height;
   margin-bottom: $navbar-gap-height;
-  background-color: #000066;
 }
 
+//TODO: create variables
 .btn-language {
   border: .1rem solid hsla(0, 0%, 100%, .6);
   border-radius: 1.7rem;

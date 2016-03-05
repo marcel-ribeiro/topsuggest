@@ -46,6 +46,8 @@ angular
         url: '/main',
         views: {
           'content': {
+            controller: 'MainController',
+            controllerAs: 'main',
             templateUrl: 'views/main.view.html'
           }
         }
