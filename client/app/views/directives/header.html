@@ -1,7 +1,7 @@
-<header ng-class="{'navbar-gap': !app.state.includes('main')}" ng-controller="NavbarController as navbar">
+<header ng-class="{'navbar-gap': navbar.isNavbarGapVisible()}" ng-controller="NavbarController as navbar">
 
   <div class="navbar navbar-fixed-top navbar-inverse navbar-transparent"
-       ng-class="{'navbar-transparent': app.state.includes('main')}" ui-scrollpoint="680">
+       ng-class="{'navbar-transparent': navbar.isTransparent()}" ui-scrollpoint="{{navbar.getScrollPointOffSet()}}">
     <div class="container">
 
       <div class="navbar-header">
@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
         <ul class="nav navbar-nav navbar-center">
-          <li>
+          <li class="active">
             <a ng-href="#/about">
               <div translate="MENU.ABOUT"></div>
             </a>
@@ -88,12 +88,4 @@
     </div>
   </div>
 
-
-  <div style="background-color: #000000; position: relative; padding-top: 200px;">
-    <pre>navbar.properties.title:{{navbar.properties.title}}</pre>
-    <pre>navbar.properties.transparency:{{navbar.properties.transparency}}</pre>
-    <pre>navbar.properties.navbarGap:{{navbar.properties.navbarGap}}</pre>
-    <pre>navbar.properties.scrollpointOffset:{{navbar.properties.scrollpointOffset}}</pre>
-    <pre>navbar.properties.$location.path() = {{navbar.properties.$location.path()}}</pre>
-  </div>
 </header><!-- /header -->
