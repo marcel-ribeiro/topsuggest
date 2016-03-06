@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name app
  * @description
- * # clientApp
+ * # app
  *
  * Main module of the application.
  */
 angular
-  .module('clientApp', [
+  .module('app', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -53,7 +53,7 @@ angular
           'content': {
             controller: 'MainController',
             controllerAs: 'main',
-            templateUrl: 'scripts/main/main.view.html'
+            templateUrl: 'components/main/main.view.html'
           }
         }
       })
@@ -62,7 +62,7 @@ angular
         url: '/about',
         views: {
           'content': {
-            templateUrl: 'scripts/about/about.view.html'
+            templateUrl: 'components/about/about.view.html'
           }
         }
       })
@@ -71,7 +71,7 @@ angular
         url: '/support',
         views: {
           'content': {
-            templateUrl: 'scripts/support/support.view.html'
+            templateUrl: 'components/support/support.view.html'
           }
         }
       })
@@ -80,7 +80,7 @@ angular
         url: '/contact',
         views: {
           'content': {
-            templateUrl: 'scripts/contact/contact.view.html'
+            templateUrl: 'components/contact/contact.view.html'
           }
         }
       });

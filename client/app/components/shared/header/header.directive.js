@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:AboutCtrl
+ * @name components.shared.header.directive
  * @description
  * # AboutCtrl
  * Controller of the clientApp
@@ -14,7 +14,7 @@ angular.module('components.shared.header.directive', ['components.shared.header.
       restrict: 'A',
       replace: true,
       controller: 'headerController',
-      templateUrl: 'scripts/shared/header/header.view.html'
+      templateUrl: 'components/shared/header/header.view.html'
     };
     return headerDirective;
   });

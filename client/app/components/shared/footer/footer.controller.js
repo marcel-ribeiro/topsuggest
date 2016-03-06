@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:AboutCtrl
+ * @name components.shared.footer.controller
  * @description
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('controllers.layout.footer', [])
+angular.module('components.shared.footer.controller', [])
 
   .controller('footerController', ['$scope', function ($scope) {
     $scope.company = {
