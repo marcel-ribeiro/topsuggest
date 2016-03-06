@@ -2,12 +2,13 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:AboutCtrl
+ * @name app.components.shared.footer.directive
  * @description
- * # AboutCtrl
- * Controller of the clientApp
+ * Controller of the footer
  */
-angular.module('directives.layout.footer', ['controllers.layout.footer'])
+angular.module('app.components.shared.footer.directive', [
+  'app.components.shared.footer.controller'
+])
 
   .directive('footerDirective', function () {
     var footerDirective = {
@@ -15,7 +16,7 @@ angular.module('directives.layout.footer', ['controllers.layout.footer'])
       scope: true,
       replace: true,
       controller: 'footerController',
-      templateUrl: 'views/directives/footer.html'
+      templateUrl: 'components/shared/footer/footer.view.html'
     };
 
 

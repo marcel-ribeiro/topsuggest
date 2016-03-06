@@ -4,8 +4,7 @@
  * @description "description of the component in markdown"
  */
 'use strict';
-angular.module('clientApp')
-  .constant('TRANSPARENT_NAVBAR_LOCATIONS', ['/main'])
+angular.module('app.components.shared.navbar.controller', ['app.components.shared.navbar.constants'])
   .controller('NavbarController', NavbarController);
 
 

@@ -2,19 +2,19 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:AboutCtrl
+ * @name app.components.shared.header.directive
  * @description
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('directives.layout.header', ['controllers.layout.header'])
+angular.module('app.components.shared.header.directive', ['app.components.shared.header.controller'])
 
   .directive('headerDirective', function () {
     var headerDirective = {
       restrict: 'A',
       replace: true,
       controller: 'headerController',
-      templateUrl: 'views/directives/header.html'
+      templateUrl: 'components/shared/header/header.view.html'
     };
     return headerDirective;
   });

@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body ng-app="clientApp">
+<body ng-app="app">
 
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -41,7 +41,7 @@
   ga('send', 'pageview');
 </script>
 
-<!-- build:js(.) scripts/vendor.js -->
+<!-- build:js(.) components/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -59,17 +59,26 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/constants/translate/translate.constants.js"></script>
-<script src="scripts/app.js"></script>
-<script src="scripts/directives/layout/header.directive.js"></script>
-<script src="scripts/controllers/layout/header.controller.js"></script>
-<script src="scripts/directives/layout/footer.directive.js"></script>
-<script src="scripts/directives/animated-dropdown.directive.js"></script>
-<script src="scripts/controllers/layout/footer.controller.js"></script>
-<script src="scripts/controllers/navbar.controller.js"></script>
-<script src="scripts/controllers/main.controller.js"></script>
-<script src="scripts/controllers/about.js"></script>
+<!-- build:js({.tmp,app}) components/components.js -->
+<script src="components/app.js"></script>
+<script src="components/shared/navbar/navbar.api.js"></script>
+<script src="components/shared/navbar/navbar.constants.js"></script>
+<script src="components/shared/navbar/navbar.controller.js"></script>
+<script src="components/shared/translate/translate.api.js"></script>
+<script src="components/shared/translate/translate.constants.js"></script>
+<script src="components/shared/animated-dropdown/animated-dropdown.api.js"></script>
+<script src="components/shared/animated-dropdown/animated-dropdown.directive.js"></script>
+<script src="components/shared/header/header.api.js"></script>
+<script src="components/shared/header/header.directive.js"></script>
+<script src="components/shared/header/header.controller.js"></script>
+<script src="components/shared/footer/footer.api.js"></script>
+<script src="components/shared/footer/footer.directive.js"></script>
+<script src="components/shared/footer/footer.controller.js"></script>
+<script src="components/sections/about/about.api.js"></script>
+<script src="components/sections/contact/contact.api.js"></script>
+<script src="components/sections/main/main.api.js"></script>
+<script src="components/sections/main/main.controller.js"></script>
+<script src="components/sections/support/support.api.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name clientApp
+ * @name app
  * @description
- * # clientApp
+ * # app
  *
  * Main module of the application.
  */
 angular
-  .module('clientApp', [
+  .module('app', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -18,11 +18,16 @@ angular
     'ngTouch',
     'ui.router',
     'ui.scrollpoint',
-    'constants.translate',
     'pascalprecht.translate',
-    'directives.layout.header',
-    'directives.layout.footer',
-    'directives.animated-dropdown'
+    'app.components.shared.translate.api',
+    'app.components.shared.header.api',
+    'app.components.shared.footer.api',
+    'app.components.shared.navbar.api',
+    'app.components.shared.animated-dropdown.api',
+    'app.components.sections.main.api',
+    'app.components.sections.contact.api',
+    'app.components.sections.about.api',
+    'app.components.sections.support.api'
   ])
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, LOCALES) {
@@ -48,7 +53,7 @@ angular
           'content': {
             controller: 'MainController',
             controllerAs: 'main',
-            templateUrl: 'views/main.view.html'
+            templateUrl: 'components/sections/main/main.view.html'
           }
         }
       })
@@ -57,7 +62,7 @@ angular
         url: '/about',
         views: {
           'content': {
-            templateUrl: 'views/about.view.html'
+            templateUrl: 'components/sections/about/about.view.html'
           }
         }
       })
@@ -66,7 +71,7 @@ angular
         url: '/support',
         views: {
           'content': {
-            templateUrl: 'views/support.view.html'
+            templateUrl: 'components/sections/support/support.view.html'
           }
         }
       })
@@ -75,7 +80,7 @@ angular
         url: '/contact',
         views: {
           'content': {
-            templateUrl: 'views/contact.view.html'
+            templateUrl: 'components/sections/contact/contact.view.html'
           }
         }
       });
