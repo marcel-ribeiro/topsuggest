@@ -22,7 +22,7 @@ function TranslateController($log, $translate, REGISTERED_LANGUAGE_KEYS) {
   vm.dropboxitemselected = function (item) {
     vm.selectedItem = item;
 
-    $log.info("Switching the language to %s", item);
+    $log.info("Switching language to %s", item);
     $translate.use(item);
   };
 }

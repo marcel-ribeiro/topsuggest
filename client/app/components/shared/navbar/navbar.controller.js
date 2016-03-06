@@ -28,11 +28,9 @@ function NavbarController($scope, $log, $location, TRANSPARENT_NAVBAR_LOCATIONS)
   //logic
   $scope.$on('$locationChangeSuccess', function (event) {
     navbarProperties = getNavbarParameters($location.path(), vm, $log);
-    $log.debug('relead navbarProperties = %s', navbarProperties.toString());
   });
 
   navbarProperties = getNavbarParameters($location.path(), vm, $log);
-  $log.debug('relead navbarProperties = %s', navbarProperties.toString());
 
 
   /*
@@ -46,7 +44,6 @@ function NavbarController($scope, $log, $location, TRANSPARENT_NAVBAR_LOCATIONS)
       navbarProps.navbarGap = false;
       navbarProps.scrollpointOffset = 680;
     } else {
-      navbarProps.title = 'Dark bar';
       navbarProps.transparency = false;
       navbarProps.navbarGap = true;
       navbarProps.scrollpointOffset = 0;
