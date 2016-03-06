@@ -7,7 +7,7 @@
  * # headerController
  * Controller of the header
  */
-angular.module('components.shared.header.controller', [])
+angular.module('app.components.shared.header.controller', [])
 
 
   .controller('headerController', ['$scope', '$state', function ($scope, $state) {

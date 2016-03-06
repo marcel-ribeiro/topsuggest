@@ -4,7 +4,7 @@
  * @description "description of the component in markdown"
  */
 'use strict';
-angular.module('components.shared.navbar.controller', ['components.shared.navbar.constants'])
+angular.module('app.components.shared.navbar.controller', ['app.components.shared.navbar.constants'])
   .controller('NavbarController', NavbarController);
 
 

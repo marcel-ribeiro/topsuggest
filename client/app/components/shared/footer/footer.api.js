@@ -5,6 +5,6 @@
  */
 'use strict';
 
-angular.module('components.shared.footer.api', [
-  'components.shared.footer.directive'
+angular.module('app.components.shared.footer.api', [
+  'app.components.shared.footer.directive'
 ]);

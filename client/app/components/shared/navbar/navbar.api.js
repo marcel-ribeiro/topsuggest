@@ -5,6 +5,6 @@
  */
 'use strict';
 
-angular.module('components.shared.navbar.api', [
-  'components.shared.navbar.controller'
+angular.module('app.components.shared.navbar.api', [
+  'app.components.shared.navbar.controller'
 ]);

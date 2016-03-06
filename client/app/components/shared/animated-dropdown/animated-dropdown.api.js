@@ -6,6 +6,6 @@
 'use strict';
 
 
-angular.module('components.shared.animated-dropdown.api', [
-  'components.shared.animated-dropdown.directive'
+angular.module('app.components.shared.animated-dropdown.api', [
+  'app.components.shared.animated-dropdown.directive'
 ]);

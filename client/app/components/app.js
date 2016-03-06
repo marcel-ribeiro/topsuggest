@@ -19,15 +19,15 @@ angular
     'ui.router',
     'ui.scrollpoint',
     'pascalprecht.translate',
-    'components.shared.translate.api',
-    'components.shared.header.api',
-    'components.shared.footer.api',
-    'components.shared.navbar.api',
-    'components.shared.animated-dropdown.api',
-    'components.sections.main.api',
-    'components.sections.contact.api',
-    'components.sections.about.api',
-    'components.sections.support.api'
+    'app.components.shared.translate.api',
+    'app.components.shared.header.api',
+    'app.components.shared.footer.api',
+    'app.components.shared.navbar.api',
+    'app.components.shared.animated-dropdown.api',
+    'app.components.sections.main.api',
+    'app.components.sections.contact.api',
+    'app.components.sections.about.api',
+    'app.components.sections.support.api'
   ])
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, LOCALES) {
@@ -53,7 +53,7 @@ angular
           'content': {
             controller: 'MainController',
             controllerAs: 'main',
-            templateUrl: 'components/main/main.view.html'
+            templateUrl: 'components/sections/main/main.view.html'
           }
         }
       })
@@ -62,7 +62,7 @@ angular
         url: '/about',
         views: {
           'content': {
-            templateUrl: 'components/about/about.view.html'
+            templateUrl: 'components/sections/about/about.view.html'
           }
         }
       })
@@ -71,7 +71,7 @@ angular
         url: '/support',
         views: {
           'content': {
-            templateUrl: 'components/support/support.view.html'
+            templateUrl: 'components/sections/support/support.view.html'
           }
         }
       })
@@ -80,7 +80,7 @@ angular
         url: '/contact',
         views: {
           'content': {
-            templateUrl: 'components/contact/contact.view.html'
+            templateUrl: 'components/sections/contact/contact.view.html'
           }
         }
       });

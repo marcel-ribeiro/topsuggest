@@ -9,7 +9,7 @@
  *
  *
  */
-angular.module('components.shared.animated-dropdown.directive', [])
+angular.module('app.components.shared.animated-dropdown.directive', [])
 
 
   .directive('opAnimatedDropdown', function () {

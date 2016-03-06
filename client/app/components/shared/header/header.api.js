@@ -5,6 +5,6 @@
  */
 'use strict';
 
-angular.module('components.shared.header.api', [
-  'components.shared.header.directive'
+angular.module('app.components.shared.header.api', [
+  'app.components.shared.header.directive'
 ]);

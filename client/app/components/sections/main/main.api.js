@@ -5,6 +5,6 @@
  */
 'use strict';
 
-angular.module('components.sections.main.api', [
-  'components.sections.main.controller'
+angular.module('app.components.sections.main.api', [
+  'app.components.sections.main.controller'
 ]);

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name components.shared.header.directive
+ * @name app.components.shared.header.directive
  * @description
  * # AboutCtrl
  * Controller of the clientApp
  */
-angular.module('components.shared.header.directive', ['components.shared.header.controller'])
+angular.module('app.components.shared.header.directive', ['app.components.shared.header.controller'])
 
   .directive('headerDirective', function () {
     var headerDirective = {

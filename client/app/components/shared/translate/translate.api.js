@@ -6,6 +6,6 @@
 'use strict';
 
 
-angular.module('components.shared.translate.api', [
-  'components.shared.translate.constants'
+angular.module('app.components.shared.translate.api', [
+  'app.components.shared.translate.constants'
 ]);

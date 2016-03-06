@@ -1,8 +1,8 @@
 /**
  * @ngdoc
- * @name topsuggest..contact.api
+ * @name topsuggest..support.api
  * @description "description of the component in markdown"
  */
 'use strict';
 
-angular.module('components.sections.contact.api', []);
+angular.module('app.components.sections.support.api', []);

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name components.shared.footer.directive
+ * @name app.components.shared.footer.directive
  * @description
  * Controller of the footer
  */
-angular.module('components.shared.footer.directive', [
-  'components.shared.footer.controller'
+angular.module('app.components.shared.footer.directive', [
+  'app.components.shared.footer.controller'
 ])
 
   .directive('footerDirective', function () {
