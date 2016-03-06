@@ -15,7 +15,7 @@ angular.module('directives.layout.footer', ['controllers.layout.footer'])
       scope: true,
       replace: true,
       controller: 'footerController',
-      templateUrl: 'scripts/shared/layout/footer.html'
+      templateUrl: 'scripts/shared/footer/footer.view.html'
     };
 
 

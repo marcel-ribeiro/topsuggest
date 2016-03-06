@@ -14,7 +14,7 @@ angular.module('directives.layout.header', ['controllers.layout.header'])
       restrict: 'A',
       replace: true,
       controller: 'headerController',
-      templateUrl: 'scripts/shared/layout/header.html'
+      templateUrl: 'scripts/shared/header/header.view.html'
     };
     return headerDirective;
   });

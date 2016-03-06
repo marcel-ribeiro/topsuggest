@@ -48,7 +48,7 @@ angular
           'content': {
             controller: 'MainController',
             controllerAs: 'main',
-            templateUrl: 'views/main.view.html'
+            templateUrl: 'scripts/main/main.view.html'
           }
         }
       })
@@ -57,7 +57,7 @@ angular
         url: '/about',
         views: {
           'content': {
-            templateUrl: 'views/about.view.html'
+            templateUrl: 'scripts/about/about.view.html'
           }
         }
       })
@@ -66,7 +66,7 @@ angular
         url: '/support',
         views: {
           'content': {
-            templateUrl: 'views/support.view.html'
+            templateUrl: 'scripts/support/support.view.html'
           }
         }
       })
@@ -75,7 +75,7 @@ angular
         url: '/contact',
         views: {
           'content': {
-            templateUrl: 'views/contact.view.html'
+            templateUrl: 'scripts/contact/contact.view.html'
           }
         }
       });
