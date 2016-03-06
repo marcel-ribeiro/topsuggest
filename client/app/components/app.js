@@ -41,7 +41,8 @@ angular
       .preferredLanguage('en')
       .fallbackLanguage('en')
       .determinePreferredLanguage()
-      .useSanitizeValueStrategy('escapeParameters');
+      .useSanitizeValueStrategy('escapeParameters')
+      .useCookieStorage();
   })
 
   .config(function ($stateProvider, $urlRouterProvider) {
