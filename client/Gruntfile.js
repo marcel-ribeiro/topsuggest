@@ -292,11 +292,13 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
+      json: ['<%= yeoman.dist %>/resources/{,*/}*.json'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
           '<%= yeoman.dist %>/images',
-          '<%= yeoman.dist %>/styles'
+          '<%= yeoman.dist %>/styles',
+          '<%= yeoman.dist %>/resources'
         ],
         patterns: {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
@@ -402,6 +404,25 @@ module.exports = function (grunt) {
       }
     },
 
+    jsonmin: {
+      stripAll: {
+        options: {
+          stripWhitespace: true,
+          stripComments: true
+        },
+        //files: {
+        //  //'<%= yeoman.dist %>/resources/locales/en.json': '<%= yeoman.dist %>/resources/locales/en.json',
+        //}
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/resources/locales/',
+          src: '*.json',
+          dest: '<%= yeoman.dist %>/resources/locales/'
+        }]
+
+      }
+    },
+
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -461,6 +482,8 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-jsonmin');
+
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -506,7 +529,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'jsonmin'
   ]);
 
   grunt.registerTask('default', [
