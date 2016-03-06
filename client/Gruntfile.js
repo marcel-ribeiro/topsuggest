@@ -410,9 +410,6 @@ module.exports = function (grunt) {
           stripWhitespace: true,
           stripComments: true
         },
-        //files: {
-        //  //'<%= yeoman.dist %>/resources/locales/en.json': '<%= yeoman.dist %>/resources/locales/en.json',
-        //}
         files: [{
           expand: true,
           cwd: '<%= yeoman.app %>/resources/locales/',
