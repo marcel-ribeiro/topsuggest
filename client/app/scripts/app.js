@@ -18,11 +18,16 @@ angular
     'ngTouch',
     'ui.router',
     'ui.scrollpoint',
-    'constants.translate',
     'pascalprecht.translate',
-    'directives.layout.header',
-    'directives.layout.footer',
-    'directives.animated-dropdown'
+    'components.shared.translate.api',
+    'components.shared.header.api',
+    'components.shared.footer.api',
+    'components.shared.navbar.api',
+    'components.shared.animated-dropdown.api',
+    'components.sections.main.api',
+    'components.sections.contact.api',
+    'components.sections.about.api',
+    'components.sections.support.api'
   ])
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, LOCALES) {

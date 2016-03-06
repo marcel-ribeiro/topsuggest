@@ -4,7 +4,7 @@
  * @description "description of the component in markdown"
  */
 'use strict';
-angular.module('clientApp')
+angular.module('components.sections.main.controller', [])
   .controller('MainController', MainController);
 
 function MainController($scope, $log) {

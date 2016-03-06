@@ -1,4 +1,4 @@
-angular.module('constants.translate', [])
+angular.module('components.shared.translate.constants', [])
 
   .constant('PREFIX_LOCALES', 'resources/locales/')
   .constant('SUFFIX_LOCALES', '.json')
