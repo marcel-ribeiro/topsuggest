@@ -5,6 +5,11 @@
     "SUPPORT": "Support",
     "CONTACT": "Contact"
   },
+  "LANGUAGES": {
+    "LANGUAGE_NAME_PT": "Portuguese",
+    "LANGUAGE_NAME_EN": "English",
+    "LANGUAGE_NAME_DE": "German"
+  },
   "FOOTER": {
     "HEADERS": {
       "ABOUT": "About",

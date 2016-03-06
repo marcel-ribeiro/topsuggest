@@ -1,13 +1,42 @@
 {
-  "APP_NAME": "Panda Velho",
-  "TITLE": "Ola - JSON",
-  "FOO": "Isto eh um paragrafo",
+  "APP_NAME": "Old Panda",
   "MENU": {
-    "TITLE": "Menu",
-    "LOGIN": "Login",
-    "SEARCH": "Pesquisar",
-    "TRANSLATE": "Traducao",
-    "PLAYLISTS": "Playlists",
-    "LOGOUT": "Sair"
+    "ABOUT": "Sobre",
+    "SUPPORT": "Suporte",
+    "CONTACT": "Contato"
+  },
+  "LANGUAGES": {
+    "LANGUAGE_NAME_PT": "Portugues",
+    "LANGUAGE_NAME_EN": "Ingles",
+    "LANGUAGE_NAME_DE": "Alemao"
+  },
+  "FOOTER": {
+    "HEADERS": {
+      "ABOUT": "Sobre",
+      "SUPPORT": "Suporte",
+      "SOCIAL": "Social",
+      "NEWS_LETTER": "News letter"
+    },
+    "ABOUT": {
+      "ITEMS": {
+        "OLD_PANDA": "Old Panda",
+        "SUGGESTIONS": "Sugestoes",
+        "LEGAL": "Legal",
+        "ADVERTISE": "Anuncie"
+      }
+    },
+    "SUPPORT": {
+      "ITEMS": {
+        "SUPPORT_HOME": "Suporte Home",
+        "COMMUNITY": "Comunidade"
+      }
+    },
+    "SOCIAL": {
+      "ITEMS": {
+        "FACEBOOK": "Facebook",
+        "TWITTER": "Twitter",
+        "GOOGLE_PLUS": "Google +"
+      }
+    }
   }
 }

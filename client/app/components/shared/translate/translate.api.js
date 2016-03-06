@@ -7,5 +7,6 @@
 
 
 angular.module('app.components.shared.translate.api', [
-  'app.components.shared.translate.constants'
+  'app.components.shared.translate.constants',
+  'app.components.shared.translate.controller'
 ]);

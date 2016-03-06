@@ -35,7 +35,7 @@
           </li>
         </ul>
 
-        <form class="navbar-form navbar-right" role="search">
+        <form class="navbar-form navbar-right" role="switch-language" ng-controller="TranslateController as translate">
           <op-animated-dropdown class="dropdown">
             <button class="btn-language" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="true">
@@ -43,11 +43,8 @@
             </button>
             <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX"
                 aria-labelledby="dropdownMenu1">
-              <li><a href="/use-cases">English</a></li>
-              <li><a href="/fr/use-cases">French</a></li>
-              <li><a href="/de/use-cases">German</a></li>
-              <li><a href="/jp/use-cases">Japanese</a></li>
-              <li><a href="/kr/use-cases">Korean</a></li>
+              <li ng-repeat="locale in translate.locales"><a ng-click="translate.dropboxitemselected(locale.id)"
+                                                             translate="{{locale.name}}"></a></li>
             </ul>
           </op-animated-dropdown>
         </form>
