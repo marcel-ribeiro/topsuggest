@@ -30,14 +30,14 @@ angular
     'app.components.sections.support.api'
   ])
 
-  .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, REGISTERED_LANGUAGE_KEYS, LOCALES) {
+  .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, REGISTERED_LANGUAGE_KEYS, LOCALES_AND_LANGUAGE_KEYS_MAP) {
 
     $translateProvider
       .useStaticFilesLoader({
         prefix: PREFIX_LOCALES,
         suffix: SUFFIX_LOCALES
       })
-      .registerAvailableLanguageKeys(REGISTERED_LANGUAGE_KEYS, LOCALES)
+      .registerAvailableLanguageKeys(REGISTERED_LANGUAGE_KEYS, LOCALES_AND_LANGUAGE_KEYS_MAP)
       .preferredLanguage('en')
       .fallbackLanguage('en')
       .determinePreferredLanguage()
