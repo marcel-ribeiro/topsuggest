@@ -16,6 +16,7 @@
       > li > a {
         &:hover,
         &:focus {
+          outline: none;
           color: $navbar-inverse-link-hover-color;
           border-bottom: .4rem solid $navbar-inverse-link-active-border-color;
         }
@@ -24,6 +25,7 @@
         &,
         &:hover,
         &:focus {
+          outline: none;
           color: $navbar-inverse-link-active-color;
           border-bottom: .4rem solid $navbar-inverse-link-active-border-color;
         }
