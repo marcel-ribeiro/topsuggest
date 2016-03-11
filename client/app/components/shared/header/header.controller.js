@@ -10,8 +10,15 @@
 angular.module('app.components.shared.header.controller', [])
 
 
-  .controller('headerController', ['$scope', '$state', function ($scope, $state) {
-    $scope.app = {
-      state: $state
-    };
-  }]);
+  .controller('HeaderController', HeaderController);
+
+function HeaderController($scope, $log, $location, TRANSPARENT_NAVBAR_LOCATIONS) {
+  var vm = this;
+  vm.getSubMenus = function (numberOfItems, nameOfItems) {
+    var subItems = [];
+    for (var i = 1; i <= numberOfItems; i++) {
+      subItems.push(nameOfItems + " - " + i);
+    }
+    return subItems;
+  };
+}

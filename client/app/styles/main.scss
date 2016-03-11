@@ -9,20 +9,22 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
-/* base */
-@import "base/base";
-@import "base/mixins";
-@import "base/animations";
+@import "wegomain";
 
-/* modules */
-@import "modules/forms";
-@import "modules/blocks";
-@import "modules/buttons";
-@import "modules/icons";
-@import "modules/slideshow";
-@import "modules/searchbar";
-
-/* layout */
-@import "layout/header";
-@import "modules/navbar";
-@import "layout/footer";
+///* base */
+//@import "base/base";
+//@import "base/mixins";
+//@import "base/animations";
+//
+///* modules */
+//@import "modules/forms";
+//@import "modules/blocks";
+//@import "modules/buttons";
+//@import "modules/icons";
+//@import "modules/slideshow";
+//@import "modules/searchbar";
+//
+///* layout */
+//@import "layout/header";
+//@import "modules/navbar";
+//@import "layout/footer";

@@ -24,6 +24,7 @@ angular
     'app.components.shared.footer.api',
     'app.components.shared.navbar.api',
     'app.components.shared.animated-dropdown.api',
+    'app.components.shared.animated-menu.api',
     'app.components.sections.main.api',
     'app.components.sections.contact.api',
     'app.components.sections.about.api',

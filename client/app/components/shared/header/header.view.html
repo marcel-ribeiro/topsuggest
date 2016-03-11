@@ -1,88 +1,129 @@
-<header ng-class="{'navbar-gap': navbar.isNavbarGapVisible()}" ng-controller="NavbarController as navbar">
-
-  <div class="navbar navbar-fixed-top navbar-inverse navbar-transparent"
-       ng-class="{'navbar-transparent': navbar.isTransparent()}" ui-scrollpoint="{{navbar.getScrollPointOffSet()}}">
-    <div class="container">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#" translate="APP_NAME"></a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-        <ul class="nav navbar-nav navbar-center">
-          <li>
-            <a ng-href="#/about">
-              <div translate="MENU.ABOUT"></div>
-            </a>
-          </li>
-          <li>
-            <a ng-href="#/support">
-              <div translate="MENU.SUPPORT"></div>
-            </a>
-          </li>
-          <li>
-            <a ng-href="#/contact">
-              <div translate="MENU.CONTACT"></div>
-            </a>
-          </li>
-        </ul>
-
-        <form class="navbar-form navbar-right" role="switch-language" ng-controller="TranslateController as translate">
-          <op-animated-dropdown class="dropdown">
-            <button class="btn-language" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="true">
-              EN
-            </button>
-            <ul class="dropdown-menu" data-dropdown-in="flipInX" data-dropdown-out="flipOutX"
-                aria-labelledby="dropdownMenu1">
-              <li ng-repeat="locale in translate.locales"><a ng-click="translate.dropboxitemselected(locale.id)"
-                                                             translate="{{locale.name}}"></a></li>
-            </ul>
-          </op-animated-dropdown>
-        </form>
-
-
-        <form class="navbar-form navbar-right" role="search">
-          <button class="btn btn-transparent-icon" ng-click="app.display.searchBar=true"><i
-              class="fa fa-search fa-2x"></i>
-          </button>
-        </form>
-
-      </div>
-      <!-- /.navbar-collapse -->
-
-
-    </div>
-    <!-- /.container-fluid -->
-  </div>
-  <!-- /.navbar -->
-
-  <div class="search-bar" ng-show="app.display.searchBar"
-       ng-class="{'expandInDown': app.display.searchBar, 'collapseOutUp': !app.display.searchBar}">
-    <div class="container">
-      <form role="search">
-        <div class="input-group">
-          <div class="input-group-btn">
-            <button class="btn btn-transparent-icon"><i class="fa fa-search fa-2x"></i></button>
-          </div>
-          <input type="text" class="form-control" maxlength="100" placeholder="Search"/>
-
-          <div class="input-group-btn">
-            <button class="btn btn-transparent-icon" ng-click="app.display.searchBar=false"><i
-                class="fa fa-times fa-2x"></i>
-            </button>
-          </div>
-        </div>
+<header id="page-header-bottom" class="page-header-bottom fixed">
+  <div class="grid-row">
+    <!-- main search -->
+    <div id="main-search" class="main-search" ng-class="{'active': app.display.searchBar}">
+      <button type="button" class="fa fa-search" ng-click="app.display.searchBar=!app.display.searchBar"></button>
+      <form action="#" _lpchecked="1">
+        <input type="text" placeholder="Type keywords and press Enter">
+        <button type="submit"></button>
       </form>
     </div>
+    <!--/ main search -->
+
+    <!-- logo -->
+    <div class="logo">
+      <span><a ng-href="#/main"><img src="images/logo.png" width="111" height="58" alt=""></a></span>
+    </div>
+    <!--/ logo -->
+
+    <!-- main nav -->
+    <nav id="main-nav" class="main-nav" op-animated-menu>
+      <a href="#" class="switcher">Menu<i class="fa fa-bars"></i></a>
+      <ul>
+        <li class="active">
+          <a ng-href="#/main">Home</i></a>
+        </li>
+        <li class="mega">
+          <a href="#">Templates<i class="fa fa-angle-down"></i></a>
+
+          <div>
+            <div class="row">
+              <div class="col col-3">
+                <ul>
+                  <li ng-repeat="item in header.getSubMenus(13, 'NAME OF ITEMS 1 COL')"><a
+                      ng-href="#/about">{{item}}</a></li>
+                </ul>
+              </div>
+              <div class="col col-3">
+                <ul>
+                  <li ng-repeat="item in header.getSubMenus(13,'NAME OF ITEMS 2 COL')"><a ng-href="#/about">{{item}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col col-3">
+                <ul>
+                  <li ng-repeat="item in header.getSubMenus(13, 'NAME OF ITEMS 3 COL')"><a
+                      ng-href="#/about">{{item}}</a></li>
+                </ul>
+              </div>
+              <div class="col col-3">
+                <ul>
+                  <li ng-repeat="item in header.getSubMenus(13, 'NAME OF ITEMS 4 COL')"><a
+                      ng-href="#/about">{{item}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Pages<i class="fa fa-angle-down"></i></a>
+          <ul>
+            <li>
+              <a href="#">About Us<i class="fa fa-angle-right"></i></a>
+              <ul>
+                <li ng-repeat="item in header.getSubMenus(4, 'About')"><a ng-href="#/about">{{item}}</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Services<i class="fa fa-angle-right"></i></a>
+              <ul>
+                <li ng-repeat="item in header.getSubMenus(2, 'Services')"><a ng-href="#/about">{{item}}</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Team<i class="fa fa-angle-right"></i></a>
+              <ul>
+                <li ng-repeat="item in header.getSubMenus(3, 'Team')"><a ng-href="#/about">{{item}}</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Forms<i class="fa fa-angle-right"></i></a>
+              <ul>
+                <li ng-repeat="item in header.getSubMenus(4, 'Forms')"><a ng-href="#/about">{{item}}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Portfolio<i class="fa fa-angle-down"></i></a>
+          <ul>
+            <li ng-repeat="item in header.getSubMenus(9, 'Portifolio')"><a ng-href="#/about">{{item}}</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Blog<i class="fa fa-angle-down"></i></a>
+          <ul>
+            <li ng-repeat="item in header.getSubMenus(5, 'Blog')"><a ng-href="#/about">{{item}}</a></li>
+          </ul>
+        </li>
+        <li class="mega mega-alt">
+          <a href="#">Shop<i class="fa fa-angle-down"></i></a>
+
+          <div>
+            <div class="row">
+              <div class="col col-6">
+                <ul>
+                  <li ng-repeat="item in header.getSubMenus(6, 'Shop')"><a ng-href="#/about">{{item}}</a></li>
+                </ul>
+              </div>
+              <div class="col col-6 col-vam">
+                <p>Featured product</p>
+                <a href="shop-details.php"><img src="../../../images/main-slideshow-lonely-planet2.jpg" width="325"
+                                                height="663" alt=""></a>
+
+                <p>Only 600$</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Contacts</i></a>
+        </li>
+      </ul>
+    </nav>
+    <!--/ main nav -->
   </div>
 
-</header><!-- /header -->
+
+  <script src="../navbar/wego.js"
+</header>
