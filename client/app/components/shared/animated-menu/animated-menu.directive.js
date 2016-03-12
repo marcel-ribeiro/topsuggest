@@ -34,32 +34,41 @@ angular.module('app.components.shared.animated-menu.directive', ['app.components
           // Add a timeout to not call the resizingTimer function every pixel
           var delayTime = 300; //Broadcast 300ms after the last resize to avoid flood
           scope.resizingTimer = $timeout(function () {
-            var width = DimensionsFactory.width();
-            if (width >= MENU_COLLAPSING_WIDTH) {
-              displayMenu(element, false);
-              return false;
-            }
-
+            displayMenu(element, false);
+            return false;
           }, delayTime);
         }
 
-        function displayMenu(element, isCollapsed) {
-          if ($(element).children('ul').length) {
-            if (isCollapsed) {
+        function displayMenu(element, isClickAction) {
+          var numberOfUlElements = $(element).children('ul').length;
+          var numberOfDivElements = $(element).children('div').length;
+
+          if (isMenuCollapsed() && isClickAction) {
+            if (numberOfUlElements) {
               $(element).children('ul').slideToggle('fast');
-            } else {
-              $(element).children('ul').show('fast');
             }
-            return false;
-          }
-          if ($(element).children('div').length) {
-            if (isCollapsed) {
-              $(element).children('div').slideToggle('fast');
-            } else {
+
+            if (numberOfDivElements) {
               $(element).children('div').show('fast');
             }
-            return false;
+
+          } else {
+
+            if (numberOfUlElements) {
+              //$(element).children('ul').show('fast');
+              $(element).children('ul').removeAttr("style");
+            }
+
+            if (numberOfDivElements) {
+              //$(element).children('div').show('fast');
+              $(element).children('div').removeAttr("style");
+            }
           }
+        }
+
+        function isMenuCollapsed() {
+          var width = DimensionsFactory.width();
+          return width < MENU_COLLAPSING_WIDTH;
         }
       }
     };
