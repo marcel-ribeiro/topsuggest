@@ -1,0 +1,390 @@
+/**/
+/* main nav */
+/**/
+.main-nav {
+  float: right;
+  font-size: 12px;
+  line-height: 110px;
+  transition: line-height 0.3s;
+
+  dl, dt, dd, ul, ol, li {
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    text-transform: uppercase;
+  }
+
+  li:first-child {
+    margin-left: 0;
+  }
+
+  li a {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #2d3e50;
+    transition: background 0.3s;
+  }
+
+  li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2d3e50;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+noindex:-o-prefocus, .main-nav {
+  /* opera hack */
+  transition: none;
+}
+
+.main-nav li i {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin: 10px -4px 0 0;
+}
+
+.main-nav li ul {
+  position: absolute;
+  z-index: 500;
+  top: 100%;
+  left: -9999px;
+  width: 190px;
+  border-bottom: 1px solid #e9e9e9;
+  background: #2d3e50;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.main-nav li:hover > a,
+.main-nav li.active > a {
+  background: #ecf0f1;
+}
+
+.main-nav li:hover > a:before,
+.main-nav li.active > a:before {
+  opacity: 1;
+}
+
+.main-nav li:hover > ul {
+  left: 0;
+  opacity: 1;
+}
+
+.main-nav li:last-child:hover > ul {
+  right: 0;
+  left: auto;
+}
+
+.main-nav li li {
+  float: none;
+  margin: 0;
+  border-top: 1px solid #e9e9e9;
+  line-height: 20px;
+}
+
+.main-nav li li:first-child {
+  border-top: 0;
+}
+
+.main-nav li li a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #ecf0f1;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-nav li li a:before {
+  display: none;
+}
+
+.main-nav li li i {
+  right: 20px;
+  margin: -6px 0 0 0;
+}
+
+.main-nav li li ul {
+  top: -1px;
+  border-top: 1px solid #e9e9e9;
+}
+
+.main-nav li li:hover > a,
+.main-nav li li.active > a {
+  background: #ecf0f1;
+  color: #2d3e50;
+}
+
+.main-nav li li:hover > ul {
+  left: 100%;
+}
+
+.main-nav li li:last-child:hover > ul {
+  right: auto;
+  left: 100%;
+}
+
+.main-nav .mega {
+  position: static;
+}
+
+.main-nav .mega ul {
+  position: static;
+  width: auto;
+  border-bottom: 0;
+  opacity: 1;
+}
+
+.main-nav .mega > div {
+  position: absolute;
+  z-index: 500;
+  top: 100%;
+  left: -9999px;
+  width: 100%;
+  padding: 20px 0;
+  background: #2d3e50;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.main-nav .mega .row {
+  display: table;
+  width: 100%;
+}
+
+.main-nav .mega .col {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 20px;
+  border-left: 1px dotted #e9e9e9;
+  box-sizing: border-box;
+}
+
+.main-nav .mega .col:first-child {
+  border-left: 0;
+}
+
+.main-nav .mega .col p {
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+  color: #fff;
+}
+
+.main-nav .mega .col img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.main-nav .mega .col-3 {
+  width: 25%;
+}
+
+.main-nav .mega .col-6 {
+  width: 25%;
+}
+
+.main-nav .mega .col-vam {
+  vertical-align: middle;
+}
+
+.main-nav .mega .col-vam a {
+  padding: 0;
+}
+
+.main-nav .mega li {
+  border-top: 0;
+}
+
+.main-nav .mega:hover > div {
+  left: 0;
+  opacity: 1;
+}
+
+.main-nav .mega-alt {
+  position: relative;
+}
+
+.main-nav .mega-alt > div {
+  width: 460px;
+}
+
+.main-nav .mega-alt:hover > div {
+  right: 0;
+  left: auto;
+}
+
+.main-nav .switcher {
+  position: absolute;
+  top: -58px;
+  right: 56px;
+  display: none;
+  height: 30px;
+  padding: 2px 0 0 13px;
+  border: 2px solid #2d3e50;
+  background: #2d3e50;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.main-nav .switcher i {
+  display: block;
+  float: right;
+  width: 30px;
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+}
+
+.page-header-bottom.fixed .main-nav {
+  line-height: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+  /* laptop */
+  .main-nav li {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  /* pad */
+  .main-nav li {
+    margin-left: 1px;
+  }
+  .main-nav li a {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* phone */
+  .main-nav {
+    position: relative;
+    float: none;
+    margin: 0 -20px;
+  }
+  .main-nav ul {
+    display: none;
+    background: #2d3e50;
+    font-size: 16px;
+    line-height: 60px;
+  }
+  .main-nav li {
+    float: none;
+    margin-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+  }
+  .main-nav li:first-child {
+    border-top: 0;
+  }
+  .main-nav li a {
+    color: #ecf0f1;
+  }
+  .main-nav li:hover > a,
+  .main-nav li.active > a {
+    background: none;
+  }
+  .main-nav li:hover > a:before,
+  .main-nav li.active > a:before {
+    opacity: 0;
+  }
+  .main-nav li i {
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+  }
+  .main-nav li i:before {
+    content: "\f196";
+  }
+  .main-nav li ul {
+    position: static;
+    display: none;
+    width: auto;
+    margin-left: 0;
+    border: 0;
+    /* 		border-top: 1px solid rgba(255,255,255,0.5); */
+    background: #e9e9e9;
+    opacity: 1;
+  }
+  .main-nav li li {
+    border-top-color: #2d3e50;
+    line-height: 30px;
+  }
+  .main-nav li li a {
+    padding-left: 40px;
+    color: #2d3e50;
+  }
+  .main-nav li li a:hover {
+    background: #2d3e50;
+    color: #ecf0f1;
+  }
+  .main-nav li li i {
+    right: 0;
+    margin: 0;
+  }
+  .main-nav li li ul {
+    border-top: 1px solid #2d3e50;
+  }
+  .main-nav li li li a {
+    padding-left: 60px;
+  }
+  .main-nav .switcher {
+    display: block;
+  }
+  .main-nav .mega > div {
+    position: static;
+    display: none;
+    width: auto;
+    padding: 0;
+    background: #e9e9e9;
+    opacity: 1;
+  }
+  .main-nav .mega .row {
+    display: block;
+    width: 100%;
+  }
+  .main-nav .mega .col {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  .main-nav .mega .col-vam {
+    display: none;
+  }
+  .main-nav .mega ul {
+    display: block;
+    border: 0;
+  }
+  .main-nav .mega ul li {
+    border-top: 1px solid #2d3e50;
+  }
+}

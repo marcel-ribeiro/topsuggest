@@ -1,30 +1,34 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts" !default;
 
-/* variables */
-@import "variables/variables";
 
 /* base bootstrap official */
+@import "variables/bootstrap-variables";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
-@import "wegomain";
+/* variables */
+@import "variables/variables";
+
+//@import "wegomain";
 
 ///* base */
-//@import "base/base";
+@import "base/base";
 //@import "base/mixins";
 //@import "base/animations";
 //
 ///* modules */
-//@import "modules/forms";
+@import "modules/forms";
 //@import "modules/blocks";
 //@import "modules/buttons";
 //@import "modules/icons";
 //@import "modules/slideshow";
 //@import "modules/searchbar";
+@import "modules/main-nav";
+@import "modules/navbar";
 //
 ///* layout */
-//@import "layout/header";
-//@import "modules/navbar";
+@import "layout/header";
 //@import "layout/footer";

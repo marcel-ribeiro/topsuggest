@@ -3,7 +3,8 @@
   "MENU": {
     "ABOUT": "About",
     "SUPPORT": "Support",
-    "CONTACT": "Contact"
+    "CONTACT": "Contact",
+    "LANGUAGES": "Languages"
   },
   "LANGUAGES": {
     "LANGUAGE_NAME_PT": "Portuguese",
