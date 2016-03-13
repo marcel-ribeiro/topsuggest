@@ -67,7 +67,8 @@ $base-font-color: #808b8d !default;
 ////$search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
 //$search-bar-input-color: #fff !default;
 //$search-bar-border: #727071 !default;
-//$search-bar-zindex: 1100 !default;
+$search-bar-zindex: 1100 !default;
+$search-bar-button-zindex: 1200 !default;
 
 //=components
 //==components.btn

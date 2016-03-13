@@ -113,9 +113,10 @@ noindex:-o-prefocus, .logo span {
 .main-search form {
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
+  right: 58px;
+  left: 140px;
   display: none;
+  z-index: $search-bar-zindex;
 }
 
 .main-search input {
@@ -123,7 +124,7 @@ noindex:-o-prefocus, .logo span {
   padding: 30px 0;
   border: 0;
   font-size: 30px;
-  line-height: 50px;
+  line-height: 52px;
   font-weight: 300;
   transition: padding 0.3s;
 }
