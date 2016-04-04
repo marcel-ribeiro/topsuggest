@@ -1,12 +1,3 @@
-.collapse {
-  > ul > li > a > i {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    margin: 10px -4px 0 0;
-  }
-}
-
 .navbar-brand {
   padding: 0 15px;
   span {
@@ -36,62 +27,219 @@
       border-bottom: 1px solid $navbar-default-link-active--border;
     }
   }
+
+  //@media (max-width: $grid-float-breakpoint-max) {
+  //  // Dropdowns get custom display when collapsed
+  //  .open .dropdown-menu {
+  //    position: static;
+  //    float: none;
+  //    width: auto;
+  //    margin-top: 0;
+  //    background-color: pink;
+  //    border: 0;
+  //    box-shadow: none;
+  //    > li > a,
+  //    .dropdown-header {
+  //      padding: 5px 15px 5px 25px;
+  //    }
+  //    > li > a {
+  //      line-height: $line-height-computed;
+  //      &:hover,
+  //      &:focus {
+  //        background-image: none;
+  //      }
+  //    }
+  //  }
+  //}
+
 }
-// Dropdowns
-.dropdown-menu {
-  background-color: $navbar-default-dropdown-bg;
-  color: $navbar-default-dropdown-link-color;
-  text-transform: uppercase;
-  padding: 0;
 
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    @include nav-divider($navbar-default-dropdown-divider-bg);
-  }
-
-  // For dropdown menus with multiple columns
-  .row, .row div {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .row div {
-    border-left: 1px solid $navbar-default-dropdown-divider-bg;
-  }
-  .row div:first-of-type {
-    border-left: none;
-  }
-
-  // Links within the dropdown menu
-  li a {
-    display: block;
-    clear: both;
-    font-weight: normal;
-    line-height: $line-height-base;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
-    padding: 12px;
-    color: $navbar-default-dropdown-link-color;
-    border-top: 1px solid $navbar-default-dropdown-border-color;
-    transition: background 0.3s;
-  }
-
-  // Hover/Focus and Active state
-  li a, .active a {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $navbar-default-dropdown-hover-link-color;
-      background-color: $navbar-default-dropdown-hover-bg;
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar {
+    li {
+      font-size: $navbar-default-collapsed-link-font-size;
     }
   }
 
+  //Menu items when collapsed
+  .navbar-default {
+    .navbar-nav {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      //First level of menu
+      > li > a {
+        color: $navbar-default-collapsed-link-color;
+        background-color: $navbar-default-collapsed-bg-color;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        transition: background 0.3s;
+        line-height: $navbar-default-collapsed-line-height;
+        &:hover,
+        &:focus {
+          color: $navbar-default-collapsed-link-color;
+          background-color: $navbar-default-collapsed-bg-color;
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $navbar-default-collapsed-link-color;
+          background-color: $navbar-default-collapsed-bg-color;
+        }
+      }
+      > .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $navbar-default-link-disabled-color;
+          background-color: $navbar-default-link-disabled-bg;
+        }
+      }
+
+      // Remove background color from open dropdown
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $navbar-default-collapsed-link-color;
+          background-color: $navbar-default-collapsed-bg-color;
+        }
+      }
+
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        color: $navbar-default-collapsed-dropdown-link-color;
+        background: $navbar-default-collapsed-dropdown-bg-color;
+        padding: 0;
+        > li:first-of-type > a {
+          border-top: none;
+        }
+        > li > a {
+          line-height: $navbar-default-collapsed-line-height;
+          color: $navbar-default-collapsed-dropdown-link-color;
+          background: $navbar-default-collapsed-dropdown-bg-color;
+          border-top: 1px solid $navbar-default-collapsed-dropdown-border-color;
+          transition: background 0.3s;
+          &:hover,
+          &:focus {
+            color: $navbar-default-collapsed-dropdown-hover-link-color;
+            background-color: $navbar-default-collapsed-dropdown-hover-bg-color;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-collapsed-link-color;
+            background-color: $navbar-default-collapsed-bg-color;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: lighten($navbar-default-collapsed-dropdown-link-color, 80%);
+            background: $navbar-default-collapsed-dropdown-bg-color;
+          }
+        }
+      }
+
+    }
+  }
+
+  // Open dropdowns
+  .nav {
+    .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-collapsed-bg-color;
+        border-color: rgba(255, 255, 255, 0.5);;
+      }
+    }
+  }
+
+  // icon expand
+  .navbar li i:before {
+    content: $navbar-default-collapsed-expand-icon;
+  }
+  .navbar li i {
+    line-height: $navbar-default-collapsed-line-height;
+    color: $navbar-default-collapsed-expand-icon-color;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+  }
+
+  .navbar-toggle {
+    margin: 35px 15px;
+  }
 }
 
-.dropdown-menu {
-  min-width: 500px;
-  left: -200px;
-}
+@media (min-width: $grid-float-breakpoint-max) {
+  // Dropdowns
+  .dropdown-menu {
+    background-color: $navbar-default-dropdown-bg;
+    color: $navbar-default-dropdown-link-color;
+    text-transform: uppercase;
+    padding: 0;
 
-.navbar-toggle {
-  margin: 35px 15px;
+    // Dividers (basically an hr) within the dropdown
+    .divider {
+      @include nav-divider($navbar-default-dropdown-divider-bg);
+    }
+
+    // For dropdown menus with multiple columns
+    .row, .row div {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .row div {
+      border-left: 1px solid $navbar-default-dropdown-divider-bg;
+    }
+    .row div:first-of-type {
+      border-left: none;
+    }
+
+    // Links within the dropdown menu
+    li a {
+      display: block;
+      clear: both;
+      font-weight: normal;
+      line-height: $line-height-base;
+      white-space: nowrap; // prevent links from randomly breaking onto new lines
+      padding: 12px;
+      color: $navbar-default-dropdown-link-color;
+      border-top: 1px solid $navbar-default-dropdown-border-color;
+      transition: background 0.3s;
+    }
+
+    // Hover/Focus and Active state
+    li a, .active a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-dropdown-hover-link-color;
+        background-color: $navbar-default-dropdown-hover-bg;
+      }
+    }
+
+  }
+
+  //Expand dropdown icon
+  .collapse {
+    > ul > li > a > i {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      margin: 10px -4px 0 0;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 500px;
+    left: -200px;
+  }
 }
