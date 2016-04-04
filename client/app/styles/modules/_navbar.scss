@@ -84,44 +84,6 @@
       }
 
       // Dropdowns get custom display when collapsed
-      //.open .dropdown-menu {
-      //  color: $navbar-default-collapsed-dropdown-link-color;
-      //  background: $navbar-default-collapsed-dropdown-bg-color;
-      //  padding: 0;
-      //  > li:first-of-type > a {
-      //    border-top: none;
-      //  }
-      //  > li > a {
-      //    line-height: $navbar-default-collapsed-line-height;
-      //    color: $navbar-default-collapsed-dropdown-link-color;
-      //    background: $navbar-default-collapsed-dropdown-bg-color;
-      //    border-top: 1px solid $navbar-default-collapsed-dropdown-border-color;
-      //    transition: background 0.3s;
-      //    &:hover,
-      //    &:focus {
-      //      color: $navbar-default-collapsed-dropdown-hover-link-color;
-      //      background-color: $navbar-default-collapsed-dropdown-hover-bg-color;
-      //    }
-      //  }
-      //  > .active > a {
-      //    &,
-      //    &:hover,
-      //    &:focus {
-      //      color: $navbar-default-collapsed-link-color;
-      //      background-color: $navbar-default-collapsed-bg-color;
-      //    }
-      //  }
-      //  > .disabled > a {
-      //    &,
-      //    &:hover,
-      //    &:focus {
-      //      color: lighten($navbar-default-collapsed-dropdown-link-color, 80%);
-      //      background: $navbar-default-collapsed-dropdown-bg-color;
-      //    }
-      //  }
-      //}
-
-      // Dropdowns get custom display when collapsed
       .open .dropdown-menu, .dropdown-menu {
         color: $navbar-default-collapsed-dropdown-link-color;
         background: $navbar-default-collapsed-dropdown-bg-color;
@@ -186,8 +148,16 @@
     right: 30px;
   }
 
-  .navbar-toggle {
+  .navbar-default .navbar-toggle {
     margin: 35px 15px;
+    background-color: $navbar-default-collapsed-navbar-toggle-bg;
+    &:hover,
+    &:focus {
+      background-color: $navbar-default-collapsed-navbar-toggle-bg;
+    }
+    .icon-bar {
+      background-color: $color-off-white;
+    }
   }
 }
 
