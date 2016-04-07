@@ -1,45 +1,99 @@
-.footer, .footer-bottom {
-  background: $footer-bg-color;
-  height: auto;
-  position: relative;
-  width: 100%;
-  border-top: 1px solid $footer-border-color;
+/*==========================================
+[ Footer-Section ]
+===========================================*/
+.footer-padding {
+  padding: 20px 0;
+}
+
+footer {
   color: $footer-text-color;
-}
-
-.footer p {
-  margin: 0;
-}
-
-.footer h3 {
-  border-bottom: 1px solid $footer-border-color;
-  color: $footer-header-color;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 14px;
-  padding: 40px 0 10px;
-  text-transform: uppercase;
-}
-
-.footer ul {
   font-size: 13px;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 15px;
-  color: $footer-text-color;
+
+  h1, h2, h3, h4, h5, h6, .footer-link p, {
+    text-transform: uppercase;
+  }
 }
 
-.footer ul li a {
-  padding: 0 0 5px 0;
-  display: block;
+/*-------------------------------
+[ Footer-Top ]
+--------------------------------*/
+.footer-top {
+  background: $footer-top-bg-color none repeat scroll 0 0;
+  padding: 40px 0;
 }
 
-.footer a {
+.newsletter {
+  h4 {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+
+  .newsletter:focus {
+    border: 1px solid $footer-link-separator-color;
+  }
+
+  .icon-addon {
+    position: relative;
+    color: #555;
+    display: block;
+  }
+  .icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 46px;
+    font-size: 14px;
+    padding: 10px 16px 10px 40px;
+  }
+  .input-group .icon-addon .form-control {
+    border-radius: 0;
+  }
+  .icon-addon.addon-lg .fa, .icon-addon.addon-lg .glyphicon {
+    font-size: 14px;
+    margin-left: 0;
+    left: 11px;
+    top: 4px;
+  }
+  .icon-addon.addon-md .glyphicon, .icon-addon .glyphicon, .icon-addon.addon-md .fa, .icon-addon .fa {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    font-size: 14px;
+    width: 20px;
+    margin-left: -2.5px;
+    text-align: center;
+    padding: 10px 0;
+    top: 1px;
+  }
+  .subscribe_btn {
+    background: #202b30 none repeat scroll 0 0;
+    color: $footer-newsletter-button-text-color;
+    font-size: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid $footer-newsletter-button-border-color;
+    height: 100%;
+    text-transform: uppercase;
+  }
+}
+
+/*-------------------------------
+[ Footer-Middel ]
+--------------------------------*/
+.footer-middel {
+  background: $footer-middle-bg-color none repeat scroll 0 0;
+}
+
+.footer-link p {
+  border-bottom: 1px solid $footer-link-separator-color;
+  padding-bottom: 10px;
+  width: 60%;
+  margin-bottom: 35px;
+}
+
+footer li a, footer a {
   color: $footer-link-color;
 }
 
-.footer-bottom {
+.footer-social-icons {
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -52,13 +106,18 @@
     float: left;
   }
 
+  li a {
+    margin-right: 10px;
+    padding-top: 4px;
+  }
+
   ul li a i {
     background: $footer-social-icons-bg-color;
     color: $footer-social-icons-content-color;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 16px;
     text-align: center;
     margin-right: 10px;
     padding-top: 15%;
@@ -72,4 +131,107 @@
   }
 }
 
+/*-------------------------------
+[ Footer-Link ]
+--------------------------------*/
+.footer-link.address span {
+  font-weight: 600;
+}
 
+.footer-link {
+  li {
+    list-style: outside none none;
+    margin-bottom: 20px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  li a:hover, li a:focus {
+    color: $footer-link-hover-color;
+    text-decoration: none;
+  }
+  li a:hover {
+    padding-left: 10px;
+  }
+}
+
+/*-------------------------------
+[ Footer-Bottom ]
+--------------------------------*/
+.footer_bottom {
+  background: $footer-bottom-bg-color none repeat scroll 0 0;
+
+  .copyright p, .copyright p a {
+    color: $footer-link-color;
+    font-size: 13px;
+    padding-top: 5px;
+  }
+
+  .copyright a {
+    font-weight: 400;
+  }
+
+  .copyright p a:hover {
+    color: $footer-link-hover-color;
+    text-decoration: none;
+  }
+}
+
+/*--------------------------------------------------------
+---------------------------[Responsiveness]--------------
+---------------------------------------------------------*/
+
+/*1.======================== Large Layout: 1900px. ============================*/
+/*2. ======================= Medium Layout: 1280px. =============================*/
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+  .newsletter input {
+    padding: 10px 8px;
+  }
+}
+
+/*3. ======================= Tablet Layout: 768px. =====================*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-link p {
+    margin-bottom: 25px;
+  }
+  .features_text {
+    margin-left: 28%;
+  }
+}
+
+/*4. ================ Mobile Layout: 320px. =================== */
+@media only screen and (max-width: 767px) {
+  .newsletter h4 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-top: 0;
+  }
+  .newsletter input {
+    padding: 10px 5px;
+  }
+  .subscribe_btn {
+    font-size: 11px !important;
+  }
+  .footer-link {
+    margin-top: 40px;
+  }
+  .footer-link p {
+    margin-bottom: 15px;
+  }
+  .col-md-3:first-child .footer-link {
+    margin-top: 0;
+  }
+  .footer-padding {
+    padding: 25px 0;
+  }
+  .copyright p {
+    font-size: 11px;
+    padding-top: 0;
+  }
+  .copyright_icon.text-right, .copyright p {
+    text-align: center;
+  }
+  .copyright_icon.text-right img {
+    width: 47px;
+  }
+}

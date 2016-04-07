@@ -1,6 +1,9 @@
 //color
+$color-white: #ffffff !default;
 $color-off-white: #ecf0f1 !default;
 $color-dark-blue: #2d3e50 !default;
+$color-darker-blue: #1e2a36 !default;
+$color-almost-black: #171d20 !default;
 
 //=base
 $font-family-benton-sans: Benton Sans, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -84,10 +87,10 @@ $navbar-default-collapsed-dropdown-hover-border-color: $color-off-white !default
 
 //==navbar
 //$navbar-font-size: $base-font-size-xl !default;
-//$navbar-inverse-color: #fff !default;
+//$navbar-inverse-color: $color-white !default;
 //$navbar-inverse-bg: #242424 !default;
 //$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
-//$navbar-inverse-link-color: #fff !default;
+//$navbar-inverse-link-color: $color-white !default;
 //$navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
 //$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
 //$navbar-inverse-link-active-bg: transparent !default;
@@ -100,14 +103,14 @@ $navbar-default-collapsed-dropdown-hover-border-color: $color-off-white !default
 //$search-bar-bg: $navbar-inverse-bg !default;
 //$search-bar-input-height: 50px !default;
 ////$search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
-//$search-bar-input-color: #fff !default;
+//$search-bar-input-color: $color-white !default;
 //$search-bar-border: #727071 !default;
 $search-bar-zindex: 1100 !default;
 $search-bar-button-zindex: 1200 !default;
 
 //=components
 //==components.btn
-//$btn-transparent-icon-color: #fff !default;
+//$btn-transparent-icon-color: $color-white !default;
 //$btn-transparent-icon-bg: transparent !default;
 //$btn-transparent-icon-border: transparent !default;
 
@@ -116,11 +119,15 @@ $search-bar-button-zindex: 1200 !default;
 $main-slideshow-height: 800px !default;
 
 //=footer
-$footer-bg-color: #f2f2f2 !default;
-$footer-text-color: #999999 !default;
-$footer-link-color: #999999 !default;
-$footer-header-color: #205D7A !default;
-$footer-border-color: #DDDDDD !default;
-$footer-bottom-bg-color: #f2f2f2 !default;
-$footer-social-icons-bg-color: #205D7A !default;
-$footer-social-icons-content-color: #fff !default;
+$footer-font-size: 13px !default;
+$footer-text-color: $color-white !default;
+$footer-link-color: $color-white !default;
+$footer-link-hover-color: #adadad !default;
+$footer-link-separator-color: $color-dark-blue !default;
+$footer-top-bg-color: $color-darker-blue !default;
+$footer-middle-bg-color: $color-almost-black !default;
+$footer-bottom-bg-color: $color-darker-blue !default;
+$footer-social-icons-bg-color: $color-dark-blue !default;
+$footer-social-icons-content-color: $color-white !default;
+$footer-newsletter-button-text-color: $color-white !default;
+$footer-newsletter-button-border-color: $color-white !default;

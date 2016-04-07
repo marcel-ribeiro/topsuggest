@@ -12,8 +12,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 /* variables */
 @import "variables/variables";
 
-//@import "wegomain";
-
 ///* base */
 @import "base/base";
 //@import "base/mixins";
@@ -31,4 +29,4 @@ $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 //
 ///* layout */
 @import "layout/header";
-//@import "layout/footer";
+@import "layout/footer";
