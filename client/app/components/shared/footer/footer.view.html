@@ -1,65 +1,111 @@
 <footer>
-  <div class="footer" id="footer">
+  <!-- Footer Top -->
+  <div class="footer-top footer-padding">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-          <h3 translate="FOOTER.HEADERS.ABOUT"></h3>
-          <ul>
-            <li><a href="#" translate="FOOTER.ABOUT.ITEMS.OLD_PANDA"></a></li>
-            <li><a href="#" translate="FOOTER.ABOUT.ITEMS.SUGGESTIONS"></a></li>
-            <li><a href="#" translate="FOOTER.ABOUT.ITEMS.LEGAL"></a></li>
-            <li><a href="#" translate="FOOTER.ABOUT.ITEMS.ADVERTISE"></a></li>
-          </ul>
+        <div class="col-xs-12 col-sm-6">
+          <div class="newsletter">
+            <h4 translate="FOOTER.NEWSLETTER.TITLE"></h4>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-          <h3 translate="FOOTER.HEADERS.SUPPORT"></h3>
-          <ul>
-            <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.SUPPORT_HOME"></a></li>
-            <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.COMMUNITY">Community</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-          <h3 translate="FOOTER.HEADERS.SOCIAL"></h3>
-          <ul>
-            <li><a href="#" translate="FOOTER.SOCIAL.ITEMS.FACEBOOK"><i class="fa fa-facebook"></i>Facebook</a></li>
-            <li><a href="#" translate="FOOTER.SOCIAL.ITEMS.TWITTER"><i class="fa fa-twitter"></i>Twitter</a></li>
-            <li><a href="#" translate="FOOTER.SOCIAL.ITEMS.GOOGLE_PLUS"><i class="fa fa-google-plus"></i>Google+</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-          <h3 translate="FOOTER.HEADERS.NEWS_LETTER"></h3>
-          <ul>
-            <li>
-              <div class="input-group">
-                <input type="text" placeholder="Email ">
-                <button type="submit" class="btn btn-success btn-sm">Subscribe Now!</button>
+        <div class="col-xs-12 col-sm-6">
+          <div class="newsletter text-right">
+            <div class="form-group">
+              <div class="input-group input-group-lg">
+                <div class="icon-addon addon-lg">
+                  <input placeholder="{{'FOOTER.NEWSLETTER.EMAIL_PLACEHOLDER' | translate}}" class="form-control"
+                         id="email" type="text">
+                  <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+                </div>
+                <span class="input-group-btn">
+                    <button class="subscribe_btn" type="button" translate="FOOTER.NEWSLETTER.BTN_SUBSCRIBE"></button>
+                </span>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <!--/.row-->
     </div>
-    <!--/.container-->
   </div>
-  <!--/.footer-->
 
-  <div class="footer-bottom">
+  <!-- Footer Middle -->
+  <div class="footer-middel footer-padding">
     <div class="container">
-      <p class="pull-left"> © {{year}} {{company.name}}.</p>
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="footer-link address">
+            <p translate="APP_NAME"></p>
+            <ul>
+              <li><span translate="FOOTER.CONTACTS.ADDRESS_LABEL" class="bold"></span><span class="bold">: </span><span
+                  translate="COMPANY.INFO.ADDRESS"></span></li>
+              <li><span translate="FOOTER.CONTACTS.PHONE_LABEL" class="bold"></span><span class="bold">: </span><span
+                  translate="COMPANY.INFO.PHONE"></span></li>
+              <li><span translate="FOOTER.CONTACTS.EMAIL_LABEL" class="bold"></span><span class="bold">: </span><span
+                  translate="COMPANY.INFO.EMAIL"></span></li>
+            </ul>
+          </div>
+          <div class="footer-social-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
 
-      <div class="pull-right">
+        <div class="col-sm-6 col-md-3">
+          <div class="footer-link res_mar">
+            <p translate="FOOTER.HEADERS.SUPPORT"></p>
+            <ul>
+              <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.24_7_SUPPORT"></a></li>
+              <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.REFOUND_POLICY"></a></li>
+              <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.SHIPPING_GUIDE"></a></li>
+              <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.INTERNATIONAL_SHIPPING"></a></li>
+              <li><a href="#" translate="FOOTER.SUPPORT.ITEMS.CAREER"></a></li>
+            </ul>
+          </div>
+        </div>
 
-        <ul>
-          <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
-        </ul>
+        <div class="col-sm-6 col-md-3">
+          <div class="footer-link res_mar">
+            <p translate="FOOTER.HEADERS.BUSINESS"></p>
+            <ul>
+              <li><a href="#" translate="FOOTER.BUSINESS.ITEMS.ADVERTISE">About Our Shop</a></li>
+              <li><a href="#" translate="FOOTER.BUSINESS.ITEMS.SELL_WITH_US">Secure Shopping</a></li>
+              <li><a href="#" translate="FOOTER.BUSINESS.ITEMS.SUPPORT_B2B">Delivery Information</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="footer-link">
+            <p translate="FOOTER.HEADERS.INFORMATION"></p>
+            <ul>
+              <li><a href="#" translate="FOOTER.INFORMATION.ITEMS.ABOUT_US"></a></li>
+              <li><a href="#" translate="FOOTER.INFORMATION.ITEMS.FAQ"></a></li>
+              <li><a href="#" translate="FOOTER.INFORMATION.ITEMS.LEGAL"></a></li>
+              <li><a href="#" translate="FOOTER.INFORMATION.ITEMS.CAREERS"></a></li>
+              <li><a href="#" translate="FOOTER.INFORMATION.ITEMS.PRESS"></a></li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
   </div>
-  <!--/.footer-bottom-->
+
+  <!-- Footer Bottom -->
+  <div class="footer_bottom footer-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <div class="copyright">
+            <p translate="FOOTER.COPYRIGHTS"
+               translate-values="{ year: '{{footer.year}}', website: '{{footer.company.website}}', company: '{{footer.company.name}}'}"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>

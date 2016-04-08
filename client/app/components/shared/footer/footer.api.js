@@ -6,5 +6,6 @@
 'use strict';
 
 angular.module('app.components.shared.footer.api', [
+  'app.components.shared.footer.constants',
   'app.components.shared.footer.directive'
 ]);

@@ -15,7 +15,8 @@ angular.module('app.components.shared.footer.directive', [
       restrict: 'A',
       scope: true,
       replace: true,
-      controller: 'footerController',
+      controller: 'FooterController',
+      controllerAs: 'footer',
       templateUrl: 'components/shared/footer/footer.view.html'
     };
 
