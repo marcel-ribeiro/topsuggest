@@ -1,8 +1,16 @@
 {
   "APP_NAME": "Old Panda",
+  "COMPANY": {
+    "INFO": {
+      "ADDRESS": "Auerfeldstrasse 16, 81541, Munich - Germany",
+      "PHONE": "(+49) 123 4567 8910",
+      "EMAIL": "info@oldpanda.com",
+      "DOMAIN": "www.oldpanda.com"
+    }
+  },
   "MENU": {
     "ABOUT": "About",
-    "SUPPORT": "Support",
+    "SUPPORT": "Customer Support",
     "CONTACT": "Contact",
     "LANGUAGES": "Languages"
   },
@@ -11,33 +19,50 @@
     "LANGUAGE_NAME_EN": "English",
     "LANGUAGE_NAME_DE": "German"
   },
+
   "FOOTER": {
-    "HEADERS": {
-      "ABOUT": "About",
-      "SUPPORT": "Support",
-      "SOCIAL": "Social",
-      "NEWS_LETTER": "News letter"
+    "NEWSLETTER": {
+      "TITLE": "Sign up for newsletter",
+      "EMAIL_PLACEHOLDER": "Email Address",
+      "BTN_SUBSCRIBE": "SUBSCRIBE"
     },
-    "ABOUT": {
-      "ITEMS": {
-        "OLD_PANDA": "Old Panda",
-        "SUGGESTIONS": "Suggestions",
-        "LEGAL": "Legal",
-        "ADVERTISE": "Advertise"
-      }
+    "CONTACTS": {
+      "ADDRESS_LABEL": "Address",
+      "PHONE_LABEL": "Phone",
+      "EMAIL_LABEL": "Email"
+    },
+    "HEADERS": {
+      "INFORMATION": "Information",
+      "SUPPORT": "Customer Support",
+      "BUSINESS": "Business"
     },
     "SUPPORT": {
       "ITEMS": {
         "SUPPORT_HOME": "Support Home",
+        "24_7_SUPPORT": "24/7 Hour Support",
+        "REFOUND_POLICY": "Refound Policy",
+        "SHIPPING_GUIDE": "Shipping Guide",
+        "INTERNATIONAL_SHIPPING": "International Shipping",
+        "CAREER": "Career",
         "COMMUNITY": "Community"
       }
     },
-    "SOCIAL": {
+    "INFORMATION": {
       "ITEMS": {
-        "FACEBOOK": "Facebook",
-        "TWITTER": "Twitter",
-        "GOOGLE_PLUS": "Google +"
+        "ABOUT_US": "About Us",
+        "FAQ": "FAQs",
+        "LEGAL": "Legal",
+        "CAREERS": "Careers",
+        "PRESS": "Press"
       }
-    }
+    },
+    "BUSINESS": {
+      "ITEMS": {
+        "ADVERTISE": "Advertising Programs ",
+        "SELL_WITH_US": "Sell at Old Panda",
+        "SUPPORT_B2B": "Support Business 2 Business"
+      }
+    },
+    "COPYRIGHTS": "Copyright {{year}} <a href=\"http://{{website}}/\">{{company}}</a> All rights reserved"
   }
 }
