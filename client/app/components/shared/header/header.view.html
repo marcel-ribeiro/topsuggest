@@ -1,5 +1,5 @@
-<header>
-  <nav class="navbar navbar-default navbar-fixed-top">
+<header ng-controller="DimensionsController as mediaType">
+  <nav class="navbar navbar-default" ng-class="{'navbar-fixed-top': !mediaType.isMobile}">
     <div class="container-fluid">
       <div id="main-search" class="main-search" ng-class="{'active': app.display.searchBar}">
         <button type="button" class="fa fa-search" ng-click="app.display.searchBar=!app.display.searchBar"></button>

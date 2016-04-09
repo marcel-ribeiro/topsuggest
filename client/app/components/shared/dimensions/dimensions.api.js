@@ -6,5 +6,6 @@
 'use strict';
 
 angular.module('app.components.shared.dimensions.api', [
-  'app.components.shared.dimensions.factory'
+  'app.components.shared.dimensions.factory',
+  'app.components.shared.dimensions.controller'
 ]);

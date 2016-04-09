@@ -19,6 +19,7 @@ angular
     'ui.router',
     'ui.scrollpoint',
     'pascalprecht.translate',
+    'matchMedia',
     'app.components.shared.translate.api',
     'app.components.shared.header.api',
     'app.components.shared.footer.api',
