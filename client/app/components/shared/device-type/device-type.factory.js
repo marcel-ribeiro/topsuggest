@@ -1,11 +1,11 @@
 /**
  * @ngdoc
- * @name topsuggest..dimensions.factory.js
+ * @deprecated
+ * @name topsuggest..device-type.factory
  * @description "description of the component in markdown"
  */
 'use strict';
-
-angular.module('app.components.shared.dimensions.factory', [])
+angular.module('app.components.shared.device-type.factory', [])
 
   .factory('DimensionsFactory', ['$window',
     function ($window) {

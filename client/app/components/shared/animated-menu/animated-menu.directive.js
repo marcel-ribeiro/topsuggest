@@ -9,7 +9,7 @@
  *
  *
  */
-angular.module('app.components.shared.animated-menu.directive', ['app.components.shared.dimensions.api'])
+angular.module('app.components.shared.animated-menu.directive', ['app.components.shared.device-type.api'])
 
 
   .directive('opAnimatedMenu', function ($window, $timeout, DimensionsFactory, MENU_COLLAPSING_WIDTH) {
