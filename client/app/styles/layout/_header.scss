@@ -29,16 +29,6 @@ noindex:-o-prefocus, .logo span {
   height: 80px;
 }
 
-@media screen and (max-width: 767px) {
-  /* phone */
-  .logo {
-    float: none;
-  }
-  .logo span {
-    height: 80px;
-  }
-}
-
 /**/
 /* logo 2 */
 /**/
@@ -90,16 +80,6 @@ noindex:-o-prefocus, .logo span {
   margin-right: 8px;
   font-size: 14px;
   line-height: 16px;
-}
-
-@media screen and (max-width: 767px) {
-  /* phone */
-  .quick-contacts {
-    margin-left: -9px;
-  }
-  .quick-contacts li {
-    margin: 0 9px;
-  }
 }
 
 /**/
@@ -191,6 +171,16 @@ noindex:-o-prefocus, .logo span {
   line-height: 80px;
 }
 
+@media screen and (max-width: 767px) {
+  /* phone */
+  .logo {
+    float: none;
+  }
+  .logo span {
+    height: 80px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   /* laptop */
   .main-search {
@@ -213,10 +203,6 @@ noindex:-o-prefocus, .logo span {
   .main-search {
     float: right;
   }
-  .main-search input {
-    padding: 15px 0;
-    font-size: 24px;
-  }
   .main-search button {
     width: 36px;
     padding: 0;
@@ -234,5 +220,15 @@ noindex:-o-prefocus, .logo span {
   /* mini phone */
   .main-search input {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* phone */
+  .quick-contacts {
+    margin-left: -9px;
+  }
+  .quick-contacts li {
+    margin: 0 9px;
   }
 }

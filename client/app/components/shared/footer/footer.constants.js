@@ -1,6 +1,6 @@
 /**
  * @ngdoc
- * @name topsuggest..animated-menu.constants
+ * @name app.components.shared.footer.constants
  * @description "description of the component in markdown"
  */
 'use strict';

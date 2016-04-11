@@ -12,7 +12,7 @@ angular.module('app.components.shared.header.controller', [])
 
   .controller('HeaderController', HeaderController);
 
-function HeaderController($scope, $log, $location, TRANSPARENT_NAVBAR_LOCATIONS) {
+function HeaderController($scope, $log, $location) {
   var vm = this;
   vm.getSubMenus = function (numberOfItems, nameOfItems) {
     var subItems = [];
