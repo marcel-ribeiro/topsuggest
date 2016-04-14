@@ -2,6 +2,15 @@
 /*                    HEADER                    */
 /*----------------------------------------------*/
 
+.header-gap {
+  height: 130px;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
 /**/
 /* logo */
 /**/
@@ -44,42 +53,6 @@ noindex:-o-prefocus, .logo span {
 
 .logo-2 span {
   width: 280px;
-}
-
-/**/
-/* quick contacts */
-/**/
-.quick-contacts {
-  float: left;
-  margin-left: -15px;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 16px;
-  color: #fff;
-}
-
-.quick-contacts li {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 15px;
-}
-
-.quick-contacts a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.quick-contacts a:hover {
-  text-decoration: underline;
-}
-
-.quick-contacts i {
-  display: block;
-  float: left;
-  margin-right: 8px;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 /**/
@@ -224,11 +197,7 @@ noindex:-o-prefocus, .logo span {
 }
 
 @media screen and (max-width: 767px) {
-  /* phone */
-  .quick-contacts {
-    margin-left: -9px;
-  }
-  .quick-contacts li {
-    margin: 0 9px;
+  .header-gap {
+    height: 0px;
   }
 }
