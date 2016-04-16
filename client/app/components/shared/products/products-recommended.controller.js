@@ -14,21 +14,21 @@ function ProductsRecommendedController() {
   vm.products = [
     {
       "id": "01",
-      "name": "Smartphones",
+      "name": "PRODUCTS.SMARTPHONES.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
-      "image": "images/main-slideshow-lonely-planet.jpg"
+      "image": "images/product01.png"
     },
     {
       "id": "02",
-      "name": "Laptops",
+      "name": "PRODUCTS.LAPTOPS.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
-      "image": "images/main-slideshow-lonely-planet2.jpg"
+      "image": "images/product02.png"
     },
     {
       "id": "3",
-      "name": "TVs",
+      "name": "PRODUCTS.TELEVISIONS.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
-      "image": "images/main-slideshow-lonely-planet3.jpg"
+      "image": "images/product03.png"
     }
   ];
 
