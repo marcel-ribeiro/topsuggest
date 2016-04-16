@@ -1,10 +1,3 @@
-//color
-$color-white: #ffffff !default;
-$color-off-white: #ecf0f1 !default;
-$color-dark-blue: #2d3e50 !default;
-$color-darker-blue: #1e2a36 !default;
-$color-almost-black: #171d20 !default;
-
 //=base
 $font-family-benton-sans: Benton Sans, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-open-sans: 'Open Sans', Helvetica, Arial, sans-serif !default;
@@ -31,7 +24,7 @@ $navbar-default-dropdown-hover-bg: $color-off-white !default;
 $navbar-default-dropdown-hover-link-color: $color-dark-blue !default;
 $navbar-default-dropdown-divider-bg: $color-off-white !default;
 
-//collapsed (small devices)
+/*collapsed (small devices)*/
 $navbar-default-collapsed-line-height: 40px !default;
 $navbar-default-collapsed-link-font-size: $base-font-size-ms !default;
 $navbar-default-collapsed-link-font-weight: $base-font-weight-light !default;
@@ -49,74 +42,16 @@ $navbar-default-collapsed-dropdown-border-color: $color-dark-blue !default;
 $navbar-default-collapsed-dropdown-hover-bg-color: $color-dark-blue !default;
 $navbar-default-collapsed-dropdown-hover-link-color: $color-off-white !default;
 $navbar-default-collapsed-dropdown-hover-border-color: $color-off-white !default;
-//$font-size-base: 20px !default;
-//$navbar-height: 120px !default;
-//$navbar-margin-bottom: 0 !default;
-//
-//
-//// Basics of a navbar
-//$navbar-height:                    200px !important;
-//$navbar-margin-bottom:             $line-height-computed !default;
-//$navbar-border-radius:             $border-radius-base !default;
-//$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
-//$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
-//$navbar-collapse-max-height:       340px !default;
-//
-//$navbar-default-color:             #777 !default;
-//$navbar-default-bg:                #f8f8f8 !default;
-//$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
-//
-//// Navbar links
-//$navbar-default-link-color:                #777 !default;
-//$navbar-default-link-hover-color:          #333 !default;
-//$navbar-default-link-hover-bg:             transparent !default;
-//$navbar-default-link-active-color:         #555 !default;
-//$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-//$navbar-default-link-disabled-color:       #ccc !default;
-//$navbar-default-link-disabled-bg:          transparent !default;
-//
-//// Navbar brand label
-//$navbar-default-brand-color:               $navbar-default-link-color !default;
-//$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
-//$navbar-default-brand-hover-bg:            transparent !default;
-//
-//// Navbar toggle
-//$navbar-default-toggle-hover-bg:           #ddd !default;
-//$navbar-default-toggle-icon-bar-bg:        #888 !default;
-//$navbar-default-toggle-border-color:       #ddd !default;
-
-//==navbar
-//$navbar-font-size: $base-font-size-xl !default;
-//$navbar-inverse-color: $color-white !default;
-//$navbar-inverse-bg: #242424 !default;
-//$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
-//$navbar-inverse-link-color: $color-white !default;
-//$navbar-inverse-link-hover-color: $navbar-inverse-link-color !default;
-//$navbar-inverse-link-active-color: $navbar-inverse-link-hover-color !default;
-//$navbar-inverse-link-active-bg: transparent !default;
-//$navbar-inverse-link-active-border-color: $navbar-inverse-link-active-color;
-//$navbar-padding-vertical: 52px !default;
-//$navbar-gap-height: $navbar-height + 15 !default;
 
 //==search-bar
-//$search-bar-height: $navbar-height+15 !default;
-//$search-bar-bg: $navbar-inverse-bg !default;
-//$search-bar-input-height: 50px !default;
-////$search-bar-padding-vertical: floor(($search-bar-height - $search-bar-input-height) / 2) !default;
-//$search-bar-input-color: $color-white !default;
-//$search-bar-border: #727071 !default;
 $search-bar-zindex: 1100 !default;
 $search-bar-button-zindex: 1200 !default;
 
-//=components
-//==components.btn
-//$btn-transparent-icon-color: $color-white !default;
-//$btn-transparent-icon-bg: transparent !default;
-//$btn-transparent-icon-border: transparent !default;
-
 //=main
-//==slideshow
-$main-slideshow-height: 800px !default;
+//==section
+$section-title-color: $color-dark-blue !default;
+$section-title-border-color: $color-dark-blue !default;
+
 
 //=footer
 $footer-font-size: 13px !default;

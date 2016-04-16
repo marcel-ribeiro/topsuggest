@@ -19,7 +19,11 @@
     "LANGUAGE_NAME_EN": "English",
     "LANGUAGE_NAME_DE": "German"
   },
-
+  "MAIN": {
+    "RECOMMENDED": {
+      "TITLE": "Recommended"
+    }
+  },
   "FOOTER": {
     "NEWSLETTER": {
       "TITLE": "Sign up for newsletter",
@@ -64,5 +68,16 @@
       }
     },
     "COPYRIGHTS": "Copyright {{year}} <a href=\"http://{{website}}/\">{{company}}</a> All rights reserved"
+  },
+  "PRODUCTS": {
+    "SMARTPHONES": {
+      "NAME": "Smartphones"
+    },
+    "LAPTOPS": {
+      "NAME": "Laptops"
+    },
+    "TELEVISIONS": {
+      "NAME": "Televisions"
+    }
   }
 }

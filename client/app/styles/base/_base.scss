@@ -9,7 +9,6 @@ table, thead, tbody, tfoot, tr, th, td {
   border: 0;
   outline: none;
   background: none;
-  vertical-align: baseline;
 }
 
 
@@ -31,4 +30,25 @@ body.ready {
 
 * {
   transition: all 300ms ease-out 0s;
+}
+
+//Images positioning
+.object-fit_fill {
+  object-fit: fill
+}
+
+.object-fit_contain {
+  object-fit: contain
+}
+
+.object-fit_cover {
+  object-fit: cover
+}
+
+.object-fit_none {
+  object-fit: none
+}
+
+.object-fit_scale-down {
+  object-fit: scale-down
 }

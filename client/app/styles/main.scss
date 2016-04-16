@@ -12,14 +12,16 @@ $fa-font-path: "/bower_components/font-awesome/fonts" !default;
 /* variables */
 @import "variables/variables";
 
+//mixins
+@import "base/mixins.panels";
+
 ///* base */
 @import "base/base";
-//@import "base/mixins";
 //@import "base/animations";
 //
 ///* modules */
 @import "modules/forms";
-//@import "modules/blocks";
+@import "modules/blocks";
 //@import "modules/buttons";
 //@import "modules/icons";
 //@import "modules/slideshow";

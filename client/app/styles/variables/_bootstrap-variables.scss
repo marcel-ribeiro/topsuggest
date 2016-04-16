@@ -1,3 +1,11 @@
+//colors
+$color-white: #ffffff !default;
+$color-off-white: #ecf0f1 !default;
+$color-dark-blue: #2d3e50 !default;
+$color-darker-blue: #1e2a36 !default;
+$color-almost-black: #171d20 !default;
+$color-gray-mid: #808b8d !default;
+
 //=base
 $font-family-benton-sans: Benton Sans, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-open-sans: 'Open Sans', Helvetica, Arial, sans-serif !default;
@@ -8,7 +16,8 @@ $base-font-size-m: ceil(($base-font-size * 1.25)) !default;
 $base-font-size-l: ceil(($base-font-size * 1.50)) !default;
 $base-font-size-xl: ceil(($base-font-size * 1.75)) !default;
 $base-font-weight-light: 100 !default;
-$base-font-color: #808b8d !default;
+$base-font-weight-medium: 400 !default;
+$base-font-color: $color-gray-mid !default;
 
 // Basics of a navbar
 $navbar-height: 110px !important;
@@ -41,3 +50,11 @@ $navbar-default-brand-hover-bg: transparent !default;
 $navbar-default-toggle-hover-bg: #ddd !default;
 $navbar-default-toggle-icon-bar-bg: #888 !default;
 $navbar-default-toggle-border-color: #ddd !default;
+
+//2. Components
+//2.1 Navbar
+//2.2 Panel
+$panel-default-text: $color-dark-blue !default;
+$panel-default-border: $color-dark-blue !default;
+$panel-default-heading-bg: $color-off-white !default;
+$panel-default-bg: $color-off-white !default;
