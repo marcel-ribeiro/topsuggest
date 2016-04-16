@@ -19,6 +19,11 @@
     "LANGUAGE_NAME_EN": "English",
     "LANGUAGE_NAME_DE": "German"
   },
+  "MAIN": {
+    "RECOMMENDED": {
+      "TITLE": "Recommended"
+    }
+  },
 
   "FOOTER": {
     "NEWSLETTER": {

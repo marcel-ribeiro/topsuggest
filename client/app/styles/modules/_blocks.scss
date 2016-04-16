@@ -1,0 +1,27 @@
+section {
+  .page-header {
+    border-bottom: none;
+    h1 {
+      color: $section-title-color;
+      font-weight: $base-font-weight-medium;
+      text-align: center;
+      text-transform: uppercase;
+      padding-bottom: 38px;
+      border-bottom: 1px solid $section-title-border-color;
+      margin-bottom: 30px;
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+}
+
+.section-recommended {
+  .list-recommended {
+    .panel-body img {
+      height: 235px;
+    }
+    .panel-body img[class] {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Panels
+@mixin app-panel-variant($border, $heading-text-color, $heading-bg-color, $heading-border, $panel-default-bg) {
+  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+  border-radius: 0;
+  border: none;
+  background-color: $panel-default-bg;
+  padding: 0 0 0 0;
+
+  & > .panel-heading {
+    border: none;
+    border-top: 10px solid $heading-border;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    + .panel-body {
+      padding: 30px 0px 0px 0px;
+    }
+  }
+}
+
+// Contextual variations
+.panel-default {
+  @include app-panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border, $panel-default-bg);
+}

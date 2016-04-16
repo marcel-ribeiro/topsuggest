@@ -27,7 +27,8 @@ angular
     'app.components.sections.main.api',
     'app.components.sections.contact.api',
     'app.components.sections.about.api',
-    'app.components.sections.support.api'
+    'app.components.sections.support.api',
+    'app.components.shared.products.products.api'
   ])
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, REGISTERED_LANGUAGE_KEYS, LOCALES_AND_LANGUAGE_KEYS_MAP) {
