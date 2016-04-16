@@ -1,7 +1,7 @@
 /**
  * @ngdoc
- * @name topsuggest..products-recommended.controller.js
- * @description "description of the component in markdown"
+ * @name app.components.shared.products.products-recommended.controller.js
+ * @description "This controller returns the list of products to be displayed in the recommended section at the main page"
  */
 'use strict';
 
