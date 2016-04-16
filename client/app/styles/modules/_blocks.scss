@@ -17,11 +17,40 @@ section {
 
 .section-recommended {
   .list-recommended {
-    .panel-body img {
-      height: 235px;
-    }
-    .panel-body img[class] {
-      width: 100%;
+    .panel-body {
+      position: relative;
+
+      img {
+        height: 235px;
+      }
+      img[class] {
+        width: 100%;
+      }
+
+      //mask
+      .overlay-mask-more {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: transparentize($color-dark-blue, 0.2);
+        color: $color-white;
+        opacity: 0;
+        transition: opacity 1s;
+        i {
+          font-size: 60px;
+          position: relative;
+          margin-top: 30%;
+        }
+      }
+      a:hover .overlay-mask-more {
+        opacity: 1;
+      }
     }
   }
 }
+
+
+
+
