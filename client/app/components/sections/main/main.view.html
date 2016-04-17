@@ -31,7 +31,9 @@
           <div class="col-sm-12 text-center">
             <div class="panel panel-default slideInLeft animate">
               <div class="panel-heading">
-                <h3 translate="{{product.name}}"></h3>
+                <h3>
+                  <a ui-sref="products({id:product.id})" translate="{{product.name}}"></a>
+                </h3>
               </div>
               <div class="panel-body">
                 <a href="#">

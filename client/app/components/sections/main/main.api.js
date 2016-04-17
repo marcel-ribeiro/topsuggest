@@ -6,5 +6,6 @@
 'use strict';
 
 angular.module('app.components.sections.main.api', [
-  'app.components.sections.main.controller'
+  'app.components.sections.main.controller',
+  'app.components.sections.main.products-recommended.controller'
 ]);

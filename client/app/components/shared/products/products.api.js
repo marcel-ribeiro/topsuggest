@@ -5,4 +5,7 @@
  */
 'use strict';
 
-angular.module('app.components.shared.products.products.api', ['app.components.shared.products.products-recommended.controller']);
+angular.module('app.components.shared.products.products.api', [
+  'app.components.shared.products.products.service',
+  'app.components.shared.products.products-resource.factory'
+]);
