@@ -69,7 +69,7 @@
     },
     "COPYRIGHTS": "Copyright {{year}} <a href=\"http://{{website}}/\">{{company}}</a> All rights reserved"
   },
-  "PRODUCTS": {
+  "CATEGORIES": {
     "SMARTPHONES": {
       "NAME": "Smartphones"
     },

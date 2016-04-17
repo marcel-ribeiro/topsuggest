@@ -16,6 +16,12 @@
       padding: 0px 0px 0px 0px;
     }
   }
+  & a {
+    color: $heading-text-color;
+    &:hover {
+      color: $heading-text-color;
+    }
+  }
 }
 
 // Contextual variations

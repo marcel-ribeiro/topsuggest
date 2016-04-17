@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ngMockE2E',
     'ui.router',
     'ui.scrollpoint',
     'pascalprecht.translate',
@@ -24,12 +25,14 @@ angular
     'app.components.shared.device-type.api',
     'app.components.shared.header.api',
     'app.components.shared.footer.api',
+    'app.components.shared.category.api',
     'app.components.sections.main.api',
     'app.components.sections.contact.api',
     'app.components.sections.about.api',
     'app.components.sections.support.api',
-    'app.components.shared.products.products.api'
+    'app.components.sections.expert-questionnaire.api'
   ])
+
 
   .config(function ($translateProvider, PREFIX_LOCALES, SUFFIX_LOCALES, REGISTERED_LANGUAGE_KEYS, LOCALES_AND_LANGUAGE_KEYS_MAP) {
 
@@ -85,8 +88,41 @@ angular
             templateUrl: 'components/sections/contact/contact.view.html'
           }
         }
+      })
+
+      .state('expert-questionnaire', {
+        url: '/expert-questionnaire/:id/view',
+        views: {
+          'content': {
+            controller: "ExpertQuestionnaireReadController",
+            controllerAs: "expertQuestionnaire",
+            templateUrl: 'components/sections/expert-questionnaire/expert-questionnaire.view.html'
+          }
+        }
       });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/main');
+  })
+
+  /*
+   * Mocking the backend!
+   * */
+  .run(function ($httpBackend, CategoryService) {
+    //Mock the responses
+    $httpBackend.whenGET(/\/category$/).respond(function (method, url, data) {
+      var items = CategoryService.query();
+      return [200, items, {}];
+    });
+
+    $httpBackend.whenGET(/\/category\/\d+/).respond(function (method, url, data) {
+      // parse the matching URL to pull out the id (/games/:id)
+      var id = url.split('/')[2];
+      var item = CategoryService.get(id);
+      return [200, item, {}];
+    });
+
+    //Execute the actual request in case the request is not in the list of mocked ones
+    $httpBackend.whenGET(/^\w+.*/).passThrough();
+    $httpBackend.whenPOST(/^\w+.*/).passThrough();
   });

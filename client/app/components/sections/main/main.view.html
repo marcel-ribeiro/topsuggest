@@ -1,20 +1,20 @@
-<section class="slideshow-section">
-  <div class="container-fluid slideshow">
-    <div class="slide-1 slide" style="background:url('../../../images/main-slideshow-lonely-planet.jpg') center center;
-          background-size:cover;">
-    </div>
-    <div class="slide-2 slide" style="background:url('../../../images/main-slideshow-lonely-planet2.jpg') center center;
-          background-size:cover;">
-    </div>
-    <div class="slide-3 slide" style="background:url('../../../images/main-slideshow-lonely-planet3.jpg') center center;
-          background-size:cover;">
-    </div>
-  </div>
-</section>
+<!--<section class="slideshow-section">-->
+<!--<div class="container-fluid slideshow">-->
+<!--<div class="slide-1 slide" style="background:url('../../../images/main-slideshow-lonely-planet.jpg') center center;-->
+<!--background-size:cover;">-->
+<!--</div>-->
+<!--<div class="slide-2 slide" style="background:url('../../../images/main-slideshow-lonely-planet2.jpg') center center;-->
+<!--background-size:cover;">-->
+<!--</div>-->
+<!--<div class="slide-3 slide" style="background:url('../../../images/main-slideshow-lonely-planet3.jpg') center center;-->
+<!--background-size:cover;">-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
 
 <!--start recommended-->
 <section class="section-recommended container-fluid"
-         ng-controller="ProductsRecommendedController as productsRecommended">
+         ng-controller="MainRecommendedController as recommended">
   <div class="container">
 
     <div class="page-header">
@@ -26,16 +26,18 @@
       <!--<div class="col-lg-3 col-md-3 col-sm-2 col-xs-1">item 1</div>-->
       <!--<div class="col-lg-3 col-md-3 col-sm-2 col-xs-1">item 2</div>-->
 
-      <div class="col-sm-4" ng-repeat="product in productsRecommended.products">
+      <div class="col-sm-4" ng-repeat="category in recommended.categories">
         <div class="row">
           <div class="col-sm-12 text-center">
             <div class="panel panel-default slideInLeft animate">
               <div class="panel-heading">
-                <h3 translate="{{product.name}}"></h3>
+                <h3>
+                  <a ui-sref="expert-questionnaire({id:category.id})" translate="{{category.name}}"></a>
+                </h3>
               </div>
               <div class="panel-body">
                 <a href="#">
-                  <img class="object-fit_fill" src="{{product.image}}">
+                  <img class="object-fit_fill" ng-src="{{category.image}}">
 
                   <div class="overlay-mask-more">
                     <i class="fa fa-plus-circle"></i>
