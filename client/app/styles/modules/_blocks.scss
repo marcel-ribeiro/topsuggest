@@ -34,7 +34,7 @@ section {
         left: 0;
         background: transparentize($color-dark-blue, 0.2);
         color: $color-white;
-        //opacity: 0;
+        opacity: 0;
         transition: opacity 1s;
         i {
           font-size: 60px;
