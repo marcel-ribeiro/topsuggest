@@ -1,20 +1,20 @@
 /**
  * @ngdoc
- * @name app.components.shared.products.products.service
- * @description "Service responsible for providing the product data coming from the server"
+ * @name app.components.shared.category.service
+ * @description "Service responsible for providing the category data coming from the server"
  */
 'use strict';
 
-angular.module('app.components.shared.products.products.service', [])
+angular.module('app.components.shared.category.service', [])
 
-  .service('ProductsService', ProductsService);
+  .service('CategoryService', CategoryService);
 
 
-function ProductsService() {
+function CategoryService() {
   this.data = [
     {
       "id": "01",
-      "name": "PRODUCTS.SMARTPHONES.NAME",
+      "name": "CATEGORIES.SMARTPHONES.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
       "image": "images/product01.png",
       "questions": [
@@ -32,7 +32,7 @@ function ProductsService() {
     },
     {
       "id": "02",
-      "name": "PRODUCTS.LAPTOPS.NAME",
+      "name": "CATEGORIES.LAPTOPS.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
       "image": "images/product02.png",
       "questions": [
@@ -50,7 +50,7 @@ function ProductsService() {
     },
     {
       "id": "3",
-      "name": "PRODUCTS.TELEVISIONS.NAME",
+      "name": "CATEGORIES.TELEVISIONS.NAME",
       "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
       "image": "images/product03.png",
       "questions": [

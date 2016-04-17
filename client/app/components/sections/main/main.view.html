@@ -14,7 +14,7 @@
 
 <!--start recommended-->
 <section class="section-recommended container-fluid"
-         ng-controller="ProductsRecommendedController as productsRecommended">
+         ng-controller="MainRecommendedController as recommended">
   <div class="container">
 
     <div class="page-header">
@@ -26,18 +26,18 @@
       <!--<div class="col-lg-3 col-md-3 col-sm-2 col-xs-1">item 1</div>-->
       <!--<div class="col-lg-3 col-md-3 col-sm-2 col-xs-1">item 2</div>-->
 
-      <div class="col-sm-4" ng-repeat="product in productsRecommended.products">
+      <div class="col-sm-4" ng-repeat="category in recommended.categories">
         <div class="row">
           <div class="col-sm-12 text-center">
             <div class="panel panel-default slideInLeft animate">
               <div class="panel-heading">
                 <h3>
-                  <a ui-sref="products({id:product.id})" translate="{{product.name}}"></a>
+                  <a ui-sref="expert-questionnaire({id:category.id})" translate="{{category.name}}"></a>
                 </h3>
               </div>
               <div class="panel-body">
                 <a href="#">
-                  <img class="object-fit_fill" ng-src="{{product.image}}">
+                  <img class="object-fit_fill" ng-src="{{category.image}}">
 
                   <div class="overlay-mask-more">
                     <i class="fa fa-plus-circle"></i>
