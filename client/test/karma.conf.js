@@ -37,6 +37,7 @@ module.exports = function(config) {
       'bower_components/angular-ui-scrollpoint/dist/scrollpoint.js',
       'bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
       'bower_components/angular-media-queries/match-media.js',
+      'bower_components/ng-sortable/dist/ng-sortable.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

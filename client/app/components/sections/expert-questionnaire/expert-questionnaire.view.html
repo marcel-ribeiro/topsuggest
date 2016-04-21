@@ -3,5 +3,21 @@
     Expert questionnaire
   </p>
 
-  <pre>{{ expertQuestionnaire | json}}</pre>
 </div>
+
+<section>
+  <div ng-repeat="question in expertQuestionnaire.category.questions">
+    {{question.question}}
+
+    <ul data-as-sortable="board.dragControlListeners" data-ng-model="question.choices" class="ui-sortable">
+      <li data-ng-repeat="choice in question.choices" data-as-sortable-item class="ui-state-default">
+        <div data-as-sortable-item-handle>{{$index}} - [id: {{choice.id}}] {{choice.description}}</div>
+      </li>
+    </ul>
+
+  </div>
+
+</section>
+
+
+<pre>{{ expertQuestionnaire | json}}</pre>

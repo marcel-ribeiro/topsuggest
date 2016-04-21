@@ -22,10 +22,22 @@ function CategoryService() {
           "question": "Which one of the below features are the most important for you?",
           "type": "ORDER",
           "choices": [
-            "A good camera, I love taking pictures!",
-            "Good speakers, I listen to music all the time!",
-            "A good screen resolution, I love playing games and watching videos on the phone!",
-            "A large screen, I like to read on my phone"
+            {
+              "id": "11",
+              "description": "A good camera, I love taking pictures!"
+            },
+            {
+              "id": "12",
+              "description": "Good speakers, I listen to music all the time!"
+            },
+            {
+              "id": "13",
+              "description": "A good screen resolution, I love playing games and watching videos on the phone!"
+            },
+            {
+              "id": "14",
+              "description": "A large screen, I like to read on my phone"
+            }
           ]
         }
       ]
@@ -40,10 +52,22 @@ function CategoryService() {
           "question": "Which one of the below features are the most important for you?",
           "type": "ORDER",
           "choices": [
-            "Good memory, I use the laptop with applications that demand a lot of memory usage!",
-            "Good processing power, I use the laptop with applications like image renderer, video editors, etc...!",
-            "Plenty of disk space, I store a lot of files like videos, images, music on my laptop... I need space!",
-            "A good graphic board, I want to be able to play games on my new laptop!"
+            {
+              "id": "21",
+              "description": "Good memory, I use the laptop with applications that demand a lot of memory usage!"
+            },
+            {
+              "id": "22",
+              "description": "Good processing power, I use the laptop with applications like image renderer, video editors, etc...!"
+            },
+            {
+              "id": "23",
+              "description": "Plenty of disk space, I store a lot of files like videos, images, music on my laptop... I need space!"
+            },
+            {
+              "id": "24",
+              "description": "A good graphic board, I want to be able to play games on my new laptop!"
+            }
           ]
         }
       ]
@@ -58,9 +82,16 @@ function CategoryService() {
           "question": "Which one of the below features are the most important for you?",
           "type": "ORDER",
           "choices": [
-            "A large screen, I have a big living room and I want to have my own cinema at home!",
-            "Good resolution, I want to see the minimal details of the movies I watch!",
-            "A great surround system, I want to feel like the sound of the movies are coming from all directions!"
+            {
+              "id": "31",
+              "description": "A large screen, I have a big living room and I want to have my own cinema at home!"
+            }, {
+              "id": "32",
+              "description": "Good resolution, I want to see the minimal details of the movies I watch!",
+            }, {
+              "id": "33",
+              "description": "A great surround system, I want to feel like the sound of the movies are coming from all directions!"
+            }
           ]
         }
       ]

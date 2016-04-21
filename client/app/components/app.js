@@ -19,6 +19,7 @@ angular
     'ngMockE2E',
     'ui.router',
     'ui.scrollpoint',
+    'as.sortable',
     'pascalprecht.translate',
     'matchMedia',
     'app.components.shared.translate.api',
