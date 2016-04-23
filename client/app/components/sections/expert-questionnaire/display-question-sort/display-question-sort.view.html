@@ -1,0 +1,17 @@
+<root>
+
+  <h3>{{question.question}}</h3>
+  <ol class="slip-list"
+      slip-before-reorder="displayQuestionSortController.beforeReorder($event, $index)"
+      slip-before-swipe="displayQuestionSortController.beforeSwipe($event, $index)"
+      slip-before-wait="displayQuestionSortController.beforeWait($event, $index)"
+      slip-after-swipe="displayQuestionSortController.afterSwipe($event, $index)"
+      slip-reorder="displayQuestionSortController.reorder($event, $spliceIndex, $originalIndex)">
+
+        <li ng-repeat="choice in question.choices" class="no-swipe bg-primary">
+          <i class="fa fa-bars instant"></i>
+          {{$index}} - [id: {{choice.id}}] {{choice.description}}
+        </li>
+   </ol>
+
+</root>

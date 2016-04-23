@@ -20,7 +20,7 @@ function CategoryService() {
       "questions": [
         {
           "question": "Which one of the below features are the most important for you?",
-          "type": "ORDER",
+          "type": "SORT",
           "choices": [
             {
               "id": "11",
@@ -50,7 +50,7 @@ function CategoryService() {
       "questions": [
         {
           "question": "Which one of the below features are the most important for you?",
-          "type": "ORDER",
+          "type": "SORT",
           "choices": [
             {
               "id": "21",
@@ -80,7 +80,7 @@ function CategoryService() {
       "questions": [
         {
           "question": "Which one of the below features are the most important for you?",
-          "type": "ORDER",
+          "type": "SORT",
           "choices": [
             {
               "id": "31",

@@ -6,17 +6,22 @@
 </div>
 
 <section>
-  <div ng-repeat="question in expertQuestionnaire.category.questions">
-    {{question.question}}
+  <div class="container">
 
-    <ul data-as-sortable="board.dragControlListeners" data-ng-model="question.choices" class="ui-sortable">
-      <li data-ng-repeat="choice in question.choices" data-as-sortable-item class="ui-state-default">
-        <div data-as-sortable-item-handle>{{$index}} - [id: {{choice.id}}] {{choice.description}}</div>
-      </li>
-    </ul>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Head</div>
+      <div class="panel-body">
 
-  </div>
+        <div ng-repeat="question in expertQuestionnaire.category.questions">
+          <display-question-sort-directive question="question">
+          </display-question-sort-directive>
 
+
+        </div><!--end:repeat questions-->
+      </div><!--end:panel-body-->
+    </div><!--end:panel-->
+
+  </div><!--end:container-->
 </section>
 
 
