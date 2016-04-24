@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/angular-media-queries/match-media.js',
       'bower_components/slip/slip.js',
       'bower_components/angular-slip/angular-slip.js',
+      'bower_components/angular-multi-step-form/dist/browser/angular-multi-step-form.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

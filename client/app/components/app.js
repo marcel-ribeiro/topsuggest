@@ -20,6 +20,7 @@ angular
     'ui.router',
     'ui.scrollpoint',
     'slip',
+    'multiStepForm',
     'pascalprecht.translate',
     'matchMedia',
     'app.components.shared.translate.api',

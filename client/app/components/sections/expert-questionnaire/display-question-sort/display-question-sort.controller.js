@@ -9,10 +9,8 @@ angular.module('app.components.sections.expert-questionnaire.display-question-so
 
   .controller('displayQuestionSortController', DisplayQuestionSortController);
 
-function DisplayQuestionSortController($scope, $timeout) {
+function DisplayQuestionSortController($timeout) {
   var vm = this;
-  vm.question = $scope.question;
-
   vm.beforeReorder = function (e, itemIndex) {
     if (/no-reorder/.test(e.target.className)) {
       e.preventDefault();

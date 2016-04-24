@@ -15,28 +15,77 @@ function CategoryService() {
     {
       "id": "01",
       "name": "CATEGORIES.SMARTPHONES.NAME",
-      "description": "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+      "description": "Some gems have hidden qualities beyond their luster, beyond their shine... is one of those gems.",
       "image": "images/product01.png",
       "questions": [
         {
+          "id": "11",
           "question": "Which one of the below features are the most important for you?",
           "type": "SORT",
           "choices": [
             {
-              "id": "11",
-              "description": "A good camera, I love taking pictures!"
+              "id": "111",
+              "description": "A good camera!",
+              "detail": "A good camera, I love taking pictures!"
             },
             {
-              "id": "12",
-              "description": "Good speakers, I listen to music all the time!"
+              "id": "112",
+              "description": "Good speakers!",
+              "detail": "Good speakers, I listen to music all the time!"
             },
             {
-              "id": "13",
-              "description": "A good screen resolution, I love playing games and watching videos on the phone!"
+              "id": "113",
+              "description": "Good screen resolution!",
+              "detail": "A good screen resolution, I love playing games and watching videos on the phone!"
             },
             {
-              "id": "14",
-              "description": "A large screen, I like to read on my phone"
+              "id": "114",
+              "description": "Large screen",
+              "detail": "A large screen, I like to read on my phone"
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "question": "How much you would like to spend?",
+          "type": "UNIQUE_CHOICE",
+          "choices": [
+            {
+              "id": "121",
+              "description": "Between $500 and $1,000",
+              "detail": "Between $500 and $1,000"
+            },
+            {
+              "id": "122",
+              "description": "Between $1,000 and $1,500",
+              "detail": "Between $1,000 and $1,500"
+            },
+            {
+              "id": "123",
+              "description": "Between $1,500 and $2,000",
+              "detail": "Between $1,500 and $2,000"
+            }
+          ]
+        },
+        {
+          "id": "13",
+          "question": "Is there any functionality you cannot live without?",
+          "type": "MULTIPLE_CHOICE",
+          "choices": [
+            {
+              "id": "131",
+              "description": "Bluetooth",
+              "detail": "It is used to connect with other devices. Most used for sharing files (like pictures, videos, music, etc..) or to control other devices like headphones, speakers, etc..."
+            },
+            {
+              "id": "132",
+              "description": "Dual chip",
+              "detail": "Mostly used by people who are customers of more than one phone provider."
+            },
+            {
+              "id": "133",
+              "description": "Water resistance",
+              "detail": "Particularly useful for people who are constantly by the water. Be it for work or leisure."
             }
           ]
         }
@@ -53,20 +102,24 @@ function CategoryService() {
           "type": "SORT",
           "choices": [
             {
-              "id": "21",
-              "description": "Good memory, I use the laptop with applications that demand a lot of memory usage!"
+              "id": "211",
+              "description": "Good memory!",
+              "detail": "Good memory, I use the laptop with applications that demand a lot of memory usage!"
             },
             {
-              "id": "22",
-              "description": "Good processing power, I use the laptop with applications like image renderer, video editors, etc...!"
+              "id": "212",
+              "description": "Good processing power!",
+              "detail": "Good processing power, I use the laptop with applications like image renderer, video editors, etc...!"
             },
             {
-              "id": "23",
-              "description": "Plenty of disk space, I store a lot of files like videos, images, music on my laptop... I need space!"
+              "id": "213",
+              "description": "Plenty of disk space!",
+              "detail": "Plenty of disk space, I store a lot of files like videos, images, music on my laptop... I need space!"
             },
             {
-              "id": "24",
-              "description": "A good graphic board, I want to be able to play games on my new laptop!"
+              "id": "214",
+              "description": "A good graphic board!",
+              "detail": "A good graphic board, I want to be able to play games on my new laptop!"
             }
           ]
         }
@@ -79,18 +132,22 @@ function CategoryService() {
       "image": "images/product03.png",
       "questions": [
         {
+          "id": "3",
           "question": "Which one of the below features are the most important for you?",
           "type": "SORT",
           "choices": [
             {
-              "id": "31",
-              "description": "A large screen, I have a big living room and I want to have my own cinema at home!"
+              "id": "311",
+              "description": "A large screen!",
+              "detail": "A large screen, I have a big living room and I want to have my own cinema at home!"
             }, {
-              "id": "32",
-              "description": "Good resolution, I want to see the minimal details of the movies I watch!",
+              "id": "312",
+              "description": "Good resolution!",
+              "detail": "Good resolution, I want to see the minimal details of the movies I watch!",
             }, {
-              "id": "33",
-              "description": "A great surround system, I want to feel like the sound of the movies are coming from all directions!"
+              "id": "313",
+              "description": "A great surround system!",
+              "detail": "A great surround system, I want to feel like the sound of the movies are coming from all directions!"
             }
           ]
         }
