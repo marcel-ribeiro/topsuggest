@@ -1,54 +1,58 @@
-.sliding-steps main,
-.sliding-steps main .well {
-  min-height: 500px;
-  margin: 0;
-}
+.sliding-steps {
 
-.sliding-steps main {
-  position: relative;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
+  main {
+    position: relative;
+    overflow: hidden;
+  }
 
-.sliding-steps main .well {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+  main .form-step-container {
+    position: relative;
+    width: 100%;
+  }
 
-.sliding-steps .form-step.ng-enter, .sliding-steps .form-step.ng-leave {
-  -webkit-transition: transform .5s ease-in-out;
-  transition: transform .5s ease-in-out;
-}
+  .form-step.ng-leave {
+    -webkit-transition: transform 0s ease-in-out;
+    transition: transform 0s ease-in-out;
+  }
+  .form-step.ng-enter {
+    -webkit-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+  }
 
-.sliding-steps .step-forward .form-step.ng-enter {
-  transform: translateX(100%);
-}
+  .step-forward {
+    .form-step.ng-enter {
+      transform: translateX(100%);
+    }
 
-.sliding-steps .step-forward .form-step.ng-enter.ng-enter-active {
-  transform: translateX(0);
-}
+    .form-step.ng-enter.ng-enter-active {
+      transform: translateX(0);
 
-.sliding-steps .step-forward .form-step.ng-leave {
-  /*transform: translateX(100%);*/
-}
+    }
 
-.sliding-steps .step-forward .form-step.ng-leave.ng-leave-active {
-  transform: translateX(-100%);
-}
+    .form-step.ng-leave {
+      /*transform: translateX(100%);*/
+    }
 
-.sliding-steps .step-backward .form-step.ng-enter {
-  transform: translateX(-100%);
-}
+    .form-step.ng-leave.ng-leave-active {
+      transform: translateX(-100%);
+    }
+  }
 
-.sliding-steps .step-backward .form-step.ng-enter.ng-enter-active {
-  transform: translateX(0);
-}
+  .step-backward {
+    .form-step.ng-enter {
+      transform: translateX(-100%);
+    }
 
-.sliding-steps .step-backward .form-step.ng-leave {
-  /*transform: translateX(100%);*/
-}
+    .form-step.ng-enter.ng-enter-active {
+      transform: translateX(0);
+    }
 
-.sliding-steps .step-backward .form-step.ng-leave.ng-leave-active {
-  transform: translateX(100%);
+    .form-step.ng-leave {
+      /*transform: translateX(100%);*/
+    }
+
+    .form-step.ng-leave.ng-leave-active {
+      transform: translateX(100%);
+    }
+  }
 }
