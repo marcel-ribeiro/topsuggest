@@ -1,0 +1,38 @@
+<div class="container">
+
+     <div class="row multistep">
+        <div class="multistep-step complete" ng-repeat="progressStep in progressMultistepController.progressSteps">
+            <div class="text-center multistep-stepname">{{progressStep.title}}</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="multistep-dot">{{progressStep.number}}</a>
+        </div>
+     </div>
+
+
+   <div class="row multistep">
+        <div class="multistep-step complete">
+            <div class="text-center multistep-stepname">Completed</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="multistep-dot">1</a>
+        </div>
+
+        <div class="multistep-step current">
+            <div class="text-center multistep-stepname">Current</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="multistep-dot">2</a>
+        </div>
+
+        <div class="multistep-step next">
+            <div class="text-center multistep-stepname">Next</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+             <button ng-disabled="$isLast()" class="multistep-dot" ng-click="$nextStep()">3</button>
+        </div>
+
+        <div class="multistep-step disabled">
+            <div class="text-center multistep-stepname">Final</div>
+            <div class="progress"><div class="progress-bar"></div></div>
+            <a href="#" class="multistep-dot">4</a>
+        </div>
+    </div>
+
+</div>

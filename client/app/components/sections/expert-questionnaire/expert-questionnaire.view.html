@@ -1,41 +1,42 @@
-<div>
-  <p>
-    Expert questionnaire
-  </p>
-
-</div>
-
 <section>
   <div class="container">
+    <multi-step-container steps="expertQuestionnaire.steps" ng-if='expertQuestionnaire.steps.length'
+                          class="sliding-steps simple-prev-next"
+                          search-id="'check'">
 
-    <div class="panel panel-primary">
-      <div class="panel-heading">Head</div>
-      <div class="panel-body">
+      <div class="panel panel-primary">
+            <div class="panel-heading">
+            <pre style="color: lightpink">{{expertQuestionnaire.numberTest}}</pre>
+            <pre style="color: lightpink">getActiveIndex() - {{multiStepFormInstance.getActiveIndex()}}</pre>
 
-        <multi-step-container steps="expertQuestionnaire.steps" ng-if='expertQuestionnaire.steps.length'
-                              class="sliding-steps simple-prev-next"
-                              search-id="'check'">
+            <progress-multistep-directive number-of-steps="{{multiStepFormInstance.steps.length}}" current-step="{{multiStepFormInstance.getActiveIndex()}}"></progress-multistep-directive>
 
-            <header>
-                <strong ng-bind-template="{{$getActiveIndex()}} / {{$getSteps().length}}"></strong>
-            </header>
+            </div>
+            <div class="panel-body">
 
-            <main step-container></main>
 
-            <footer>
-                <button ng-disabled="$isFirst()" class="btn btn-default" ng-click="$previousStep()">
-                    <span class="fa fa-chevron-left"></span>
-                    Previous
-                </button>
-                <button ng-disabled="$isLast()" class="btn btn-default" ng-click="$nextStep()">
-                    Next
-                    <span class="fa fa-chevron-right"></span>
-                </button>
-            </footer>
-        </multi-step-container>
 
-      </div><!--end:panel-body-->
-    </div><!--end:panel-->
+                  <header>
+                    <strong ng-bind-template="{{$getActiveIndex()}} / {{$getSteps().length}}"></strong>
+                  </header>
+
+                  <main step-container></main>
+
+                  <footer>
+                      <button ng-disabled="$isFirst()" class="btn btn-default" ng-click="$previousStep()">
+                          <span class="fa fa-chevron-left"></span>
+                          Previous
+                      </button>
+                      <button ng-disabled="$isLast()" class="btn btn-default" ng-click="$nextStep()">
+                          Next
+                          <span class="fa fa-chevron-right"></span>
+                      </button>
+                  </footer>
+
+
+            </div><!--end:panel-body-->
+      </div><!--end:panel-->
+    </multi-step-container>
 
   </div><!--end:container-->
 </section>

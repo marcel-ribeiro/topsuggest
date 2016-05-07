@@ -4,7 +4,9 @@ $color-off-white: #ecf0f1 !default;
 $color-dark-blue: #2d3e50 !default;
 $color-darker-blue: #1e2a36 !default;
 $color-almost-black: #171d20 !default;
+$color-gray-light: #808b8d !default;
 $color-gray-mid: #808b8d !default;
+$color-success-light: lighten(#3c763d, 50%) !default;
 
 //bootstrap colors
 $brand-primary: $color-dark-blue !default;

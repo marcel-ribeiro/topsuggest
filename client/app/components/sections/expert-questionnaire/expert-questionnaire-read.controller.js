@@ -21,8 +21,6 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
 
   function setSteps(result) {
     angular.forEach(result.questions, function (question) {
-      console.log(question);
-
       var step = {
         templateUrl: 'components/sections/expert-questionnaire/display-question.view.html',
         title: question.id,

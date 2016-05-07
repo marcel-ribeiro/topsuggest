@@ -27,6 +27,7 @@ angular
     'app.components.shared.device-type.api',
     'app.components.shared.header.api',
     'app.components.shared.footer.api',
+    'app.components.shared.progress-multistep.api',
     'app.components.shared.category.api',
     'app.components.sections.main.api',
     'app.components.sections.contact.api',

@@ -1,0 +1,157 @@
+$step-name-color: $color-white;
+$step-number-color: $color-white;
+
+$inactive-bar-color: $color-white;
+$active-bar-color: $color-white;
+
+$complete-color: $color-dark-blue;
+$complete-border-color: $color-white;
+
+$current-color: $color-dark-blue;
+$current-border-color: $color-white;
+
+$next-color: $color-gray-mid;
+$next-border-color: $color-white;
+$next-color-hover: $color-dark-blue;
+$next-border-color-hover: $color-white;
+
+$inactive-color: $color-gray-mid;
+$inactive-border-color: $color-white;
+
+$dotRadius: 22px;
+$dotInnerRadius: 8px;
+$barThickness: $dotRadius * .66;
+$stepNameSize: 1.6rem;
+
+.multistep {
+  margin: 2% 10% 2% 10%;
+  .multistep-step {
+    padding: 0;
+    position: relative;
+    margin-bottom: 10px;
+    float: left;
+    a, a:hover {
+      text-decoration: none;
+    }
+
+    .multistep-stepname {
+      margin-bottom: $dotRadius;
+      color: $step-name-color;
+      font-size: $stepNameSize;
+      white-space: nowrap;
+    }
+
+    .multistep-dot {
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      width: $dotRadius * 2;
+      height: $dotRadius * 2;
+      display: block;
+      margin-top: -$dotRadius;
+      margin-left: -$dotRadius + .5;
+      border-radius: 50%;
+      border: solid $dotInnerRadius;
+      padding-top: 2px;
+      text-align: center;
+      background: $inactive-color;
+      border-color: $inactive-border-color;
+      color: $step-number-color;
+      &:after {
+        //content: ' ';
+        border-radius: 50px;
+        position: absolute;
+        top: $dotInnerRadius;
+        bottom: $dotInnerRadius;
+        left: $dotInnerRadius;
+        right: $dotInnerRadius;
+        background: $inactive-color;
+      }
+    }
+
+    .progress {
+      position: absolute;
+      width: 100%;
+      height: $barThickness;
+      margin-top: -$barThickness / 2;
+      box-shadow: none;
+      border-radius: 0;
+      background-color: $inactive-bar-color;
+
+      .progress-bar {
+        width: 0px;
+        box-shadow: none;
+        background: $active-bar-color;
+      }
+    }
+
+    &:first-child > .progress {
+      left: 50%;
+      //width: 50%;
+    }
+
+    &:last-child > .progress {
+      width: 50%;
+    }
+
+    &.complete {
+      .multistep-dot {
+        background: $complete-color;
+        border-color: $complete-border-color;
+      }
+
+      .progress > .progress-bar {
+        width: 100%;
+      }
+    }
+
+    &.next {
+      .multistep-dot {
+        background: $next-color;
+        border-color: $next-border-color;
+      }
+      &:hover {
+        .multistep-dot {
+          background: $next-color-hover;
+          border-color: $next-border-color-hover;
+        }
+
+        .multistep-dot:after {
+          background: $next-color-hover;
+        }
+      }
+    }
+
+    &.current {
+      .multistep-dot {
+        background: $current-color;
+        border-color: $current-border-color;
+
+        &:after {
+          background: $current-color;
+        }
+      }
+
+      .progress > .progress-bar {
+        width: 50%;
+      }
+
+      &:first-child > .progress > .progress-bar {
+        width: 0%;
+      }
+
+      &:last-child > .progress > .progress-bar {
+        width: 100%;
+      }
+    }
+
+    a.multistep-dot {
+      pointer-events: none;
+    }
+
+    &.next a.multistep-dot {
+      pointer-events: all;
+    }
+  }
+
+}
