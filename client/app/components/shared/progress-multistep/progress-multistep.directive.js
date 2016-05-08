@@ -11,64 +11,32 @@ angular.module('app.components.shared.progress-multistep.directive', [
 
   .directive('progressMultistepDirective', ProgressMultistepDirective);
 
-function ProgressMultistepDirective($timeout) {
+function ProgressMultistepDirective() {
   return {
     restrict: 'AE',
     replace: true,
     controller: 'progressMultistepController',
     controllerAs: 'progressMultistepController',
     bindToController: {
-      numberOfSteps: '@'
-      //   currentStep: '@'
+      numberOfSteps: '@',
+      currentStep: '@'
     },
     templateUrl: 'components/shared/progress-multistep/progress-multistep.view.html',
     link: linkFunction,
-    scope: {
-      numberOfSteps: '@',
-      currentStep: '@',
-      // multiStepFormInstance: '='
-    },
-    // compile: compilingDirective
+    scope: true
   };
 
 
   function linkFunction(scope, element, attrs) {
-    console.info("scope.numberOfSteps = " + scope.numberOfSteps);
-    console.info("scope.currentStep = " + scope.currentStep);
-    // console.info("scope.multiStepFormInstance = " + scope. multiStepFormInstance.getActiveIndex());
+    scope.$watch(
+      "progressMultistepController.numberOfSteps",
+      function handleNumberOfStepsChange(newValue, oldValue) {
+        // console.log("Updating steps sue to change on number of steps. From: %s To: %s", oldValue, newValue);
+        var multistepStep = $('.multistep-step');
+        var stepWidth = Math.floor(100 / newValue);
+        multistepStep.css("width", stepWidth + "%");
+      }
+    );
 
-
-    $timeout(function () {
-      var multistepStep = $('.multistep-step');
-      console.info("multistepStep = " + multistepStep);
-
-      // var stepWidth = Math.floor(100 / attrs.numberOfSteps);
-      var stepWidth = Math.floor(100 / 4);
-      multistepStep.css("width", stepWidth + "%");
-    });
   }
-
-  function compilingDirective(element, attributes) {
-    console.log("simple compile", arguments);
-    return {
-      //   pre: function (scope, element, attributes, controller, transcludeFn) {
-      //     console.log("simple pre", arguments);
-      //
-      //     $timeout(function () {
-      //       scope.$apply(function () {
-      //         var currentStep = scope.$eval(attributes.currentStep);
-      //         console.info("currentStep = " + currentStep);
-      //
-      //         var numberOfSteps = scope.$eval(attributes.numberOfSteps);
-      //         console.info("numberOfSteps = " + numberOfSteps);
-      //       });
-      //     });
-      //
-      //   },
-      //   post: function (scope, element, attributes, controller, transcludeFn) {
-      //     console.log("simple post", arguments);
-      //   }
-    }
-  }
-
 }

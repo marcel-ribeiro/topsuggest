@@ -6,10 +6,8 @@
 
       <div class="panel panel-primary">
             <div class="panel-heading">
-            <pre style="color: lightpink">{{expertQuestionnaire.numberTest}}</pre>
-            <pre style="color: lightpink">getActiveIndex() - {{multiStepFormInstance.getActiveIndex()}}</pre>
 
-            <progress-multistep-directive number-of-steps="{{multiStepFormInstance.steps.length}}" current-step="{{multiStepFormInstance.getActiveIndex()}}"></progress-multistep-directive>
+            <progress-multistep-directive number-of-steps="{{$getSteps().length}}" current-step="{{$getActiveIndex()}}"></progress-multistep-directive>
 
             </div>
             <div class="panel-body">
