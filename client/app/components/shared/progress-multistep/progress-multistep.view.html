@@ -2,7 +2,6 @@
 
      <div class="row multistep">
         <div class="multistep-step" ng-class="{'complete' : progressStep.isComplete , 'current' : progressStep.isCurrent, 'next': progressStep.isNext}" ng-repeat="progressStep in progressMultistepController.progressSteps">
-            <div class="text-center multistep-stepname">{{progressStep.title}}</div>
             <div class="progress"><div class="progress-bar"></div></div>
             <button class="multistep-dot" ng-disabled="!progressStep.isComplete" ng-click="$setActiveIndex(progressStep.number)" ng-if="!progressStep.isNext">{{progressStep.number}}</button>
             <button class="multistep-dot" ng-disabled="$isLast()" ng-click="$nextStep()" ng-if="progressStep.isNext">{{progressStep.number}}</button>
