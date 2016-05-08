@@ -33,6 +33,8 @@ function ProgressMultistepController($scope) {
 
 function createProgressSteps(numberOfSteps, currentStep, existingprogressSteps) {
   var progressSteps = [];
+  currentStep = parseInt(currentStep);
+  
   for (var i = 1; i <= numberOfSteps; i++) {
     var progressStep = getProgressStep(i, existingprogressSteps);
 
