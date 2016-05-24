@@ -5,7 +5,9 @@
  */
 'use strict';
 
-angular.module('app.components.sections.expert-questionnaire-read.controller', ['app.components.sections.expert-questionnaire.display-question.controller'])
+angular.module('app.components.sections.expert-questionnaire-read.controller', [
+  'app.components.sections.expert-questionnaire.display-question.controller'
+])
 
   .controller('ExpertQuestionnaireReadController', ExpertQuestionnaireReadController);
 
@@ -21,8 +23,11 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
 
   function setSteps(result) {
     angular.forEach(result.questions, function (question) {
+
+
       var step = {
         templateUrl: 'components/sections/expert-questionnaire/display-question.view.html',
+        // templateUrl: 'components/sections/expert-questionnaire/display-question-multiple-choice/display-question-multiple-choice.view.html',
         title: question.id,
         controller: 'displayQuestionController',
         controllerAs: 'displayQuestionController',

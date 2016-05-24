@@ -1,3 +1,15 @@
 <div class="form-step-container">
-  <display-question-sort-directive question="displayQuestionController.question"></display-question-sort-directive>
+   <div ng-switch on="displayQuestionController.question.type">
+      <div ng-switch-when="SORT">
+          <display-question-sort-directive question="displayQuestionController.question"></display-question-sort-directive>
+      </div>
+      <div ng-switch-when="MULTIPLE_CHOICE">
+          <display-question-multiple-choice-directive question="displayQuestionController.question"></display-question-multiple-choice-directive>
+      </div>
+      <div ng-switch-when="UNIQUE_CHOICE">Unique choice directive</div>
+      <div ng-switch-default>UNKNOWN</div>
+  </div>
+
+
+  {{displayQuestionController.question.type}}
 </div>
