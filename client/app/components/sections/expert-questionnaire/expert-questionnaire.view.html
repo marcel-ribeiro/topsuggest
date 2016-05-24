@@ -12,24 +12,22 @@
             </div>
             <div class="panel-body">
 
-
-
-                  <header>
+                  <div class="multi-step-container-header">
                     <strong ng-bind-template="{{$getActiveIndex()}} / {{$getSteps().length}}"></strong>
-                  </header>
+                  </div>
 
                   <main step-container></main>
 
-                  <footer>
-                      <button ng-disabled="$isFirst()" class="btn btn-default" ng-click="$previousStep()">
+                  <div class="multi-step-container-footer">
+                      <button ng-disabled="$isFirst()" class="btn btn-danger pull-left" ng-click="$previousStep()">
                           <span class="fa fa-chevron-left"></span>
                           Previous
                       </button>
-                      <button ng-disabled="$isLast()" class="btn btn-default" ng-click="$nextStep()">
+                      <button ng-disabled="$isLast()" class="btn btn-success pull-right" ng-click="$nextStep()">
                           Next
                           <span class="fa fa-chevron-right"></span>
                       </button>
-                  </footer>
+                  </div>
 
 
             </div><!--end:panel-body-->
