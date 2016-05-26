@@ -5,6 +5,6 @@
  */
 'use strict';
 
-angular.module('app.components.sections.expert-questionnaire.display-question.api' [
+angular.module('app.components.sections.expert-questionnaire.display-question.api', [
   'app.components.sections.expert-questionnaire.display-question.controller'
-  ]);
+]);

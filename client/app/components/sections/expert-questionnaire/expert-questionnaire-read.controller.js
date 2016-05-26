@@ -26,8 +26,7 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
 
 
       var step = {
-        templateUrl: 'components/sections/expert-questionnaire/display-question.view.html',
-        // templateUrl: 'components/sections/expert-questionnaire/display-question-multiple-choice/display-question-multiple-choice.view.html',
+        templateUrl: 'components/sections/expert-questionnaire/display-question/display-question.view.html',
         title: question.id,
         controller: 'displayQuestionController',
         controllerAs: 'displayQuestionController',
