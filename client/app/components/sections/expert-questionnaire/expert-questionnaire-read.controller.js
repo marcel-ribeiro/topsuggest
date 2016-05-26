@@ -5,14 +5,12 @@
  */
 'use strict';
 
-angular.module('app.components.sections.expert-questionnaire-read.controller', [
-  'app.components.sections.expert-questionnaire.display-question.controller'
-])
+angular.module('app.components.sections.expert-questionnaire-read.controller', [])
 
   .controller('ExpertQuestionnaireReadController', ExpertQuestionnaireReadController);
 
 
-function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams, $scope) {
+function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams) {
   var _this = this;
   _this.isStepsLoaded = false;
   _this.steps = [];
