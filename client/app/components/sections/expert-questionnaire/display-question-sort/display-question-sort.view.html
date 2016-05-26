@@ -1,6 +1,7 @@
-<div>
+<div class="question-display">
 
-  <h3>{{displayQuestionSortController.question.question}}</h3>
+  <h3 class="title">{{displayQuestionSortController.question.question}}</h3>
+
   <ol class="slip-list"
       slip-before-reorder="displayQuestionSortController.beforeReorder($event, $index)"
       slip-before-swipe="displayQuestionSortController.beforeSwipe($event, $index)"

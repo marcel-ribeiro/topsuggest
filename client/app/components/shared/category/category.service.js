@@ -48,7 +48,7 @@ function CategoryService() {
         {
           "id": "12",
           "question": "How much you would like to spend?",
-          "type": "UNIQUE_CHOICE",
+          "type": "SINGLE_CHOICE",
           "choices": [
             {
               "id": "121",

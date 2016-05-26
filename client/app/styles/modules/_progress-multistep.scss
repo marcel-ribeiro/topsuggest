@@ -57,6 +57,7 @@ $stepNameSize: 1.6rem;
       background: $inactive-color;
       border-color: $inactive-border-color;
       color: $step-number-color;
+
       &:after {
         //content: ' ';
         border-radius: 50px;
@@ -109,6 +110,18 @@ $stepNameSize: 1.6rem;
       .multistep-dot {
         background: $next-color;
         border-color: $next-border-color;
+
+        //disabled button
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+          background: $inactive-color !important;
+          &:hover,
+          &:focus,
+          &.focus {
+            background: $inactive-color !important;
+          }
+        }
       }
       &:hover {
         .multistep-dot {

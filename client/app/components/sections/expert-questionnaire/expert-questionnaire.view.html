@@ -23,7 +23,7 @@
                           <span class="fa fa-chevron-left"></span>
                           Previous
                       </button>
-                      <button ng-disabled="$isLast()" class="btn btn-success pull-right" ng-click="$nextStep()">
+                      <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-success pull-right" ng-click="$nextStep()">
                           Next
                           <span class="fa fa-chevron-right"></span>
                       </button>

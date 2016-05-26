@@ -1,17 +1,21 @@
-<div>
-  MULTIPLE choide
-  <h3>{{displayQuestionMultipleChoiceController.question.question}}</h3>
-  <ol class="slip-list"
-      slip-before-reorder="displayQuestionMultipleChoiceController.beforeReorder($event, $index)"
-      slip-before-swipe="displayQuestionMultipleChoiceController.beforeSwipe($event, $index)"
-      slip-before-wait="displayQuestionMultipleChoiceController.beforeWait($event, $index)"
-      slip-after-swipe="displayQuestionMultipleChoiceController.afterSwipe($event, $index)"
-      slip-reorder="displayQuestionMultipleChoiceController.reorder($event, $spliceIndex, $originalIndex)">
+<div class="question-display">
+  <h3 class="title">{{displayQuestionMultipleChoiceController.question.question}}</h3>
 
-        <li ng-repeat="choice in displayQuestionMultipleChoiceController.question.choices" class="no-swipe bg-primary">
-          <i class="fa fa-bars instant"></i>
-          {{$index+1}} - [id: {{choice.id}}] {{choice.description}}
-        </li>
-   </ol>
+  <form>
+    <div class="form-group row" form-step-validity>
+      <!--<label class="col-sm-2">Checkbox</label>-->
+      <div class="col-sm-12" ng-repeat="choice in displayQuestionMultipleChoiceController.question.choices">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="question-id-{{displayQuestionMultipleChoiceController.question.id}}"
+                   id="choice-id-{{choice.id}}"
+                   ng-model="choice.isChecked"
+                   ng-change="displayQuestionMultipleChoiceController.validate()">
+            {{choice.description}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
 
 </div>
