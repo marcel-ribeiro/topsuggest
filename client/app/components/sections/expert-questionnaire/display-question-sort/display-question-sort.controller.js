@@ -9,8 +9,12 @@ angular.module('app.components.sections.expert-questionnaire.display-question-so
 
   .controller('displayQuestionSortController', DisplayQuestionSortController);
 
-function DisplayQuestionSortController($timeout) {
+function DisplayQuestionSortController(question, multiStepFormInstance, $timeout) {
   var vm = this;
+  vm.question = question;
+
+  _setInitialValidity();
+
   vm.beforeReorder = function (e, itemIndex) {
     if (/no-reorder/.test(e.target.className)) {
       e.preventDefault();
@@ -44,5 +48,11 @@ function DisplayQuestionSortController($timeout) {
 
     return true;
   };
+
+  function _setInitialValidity() {
+    var activeStepIndex = multiStepFormInstance.getActiveIndex();
+    multiStepFormInstance.setValidity(true, activeStepIndex);
+    return true;
+  }
 
 }

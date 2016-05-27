@@ -19,12 +19,22 @@
                   <main step-container></main>
 
                   <div class="multi-step-container-footer">
+
+                      <!--previous button-->
                       <button ng-disabled="$isFirst()" class="btn btn-danger pull-left" ng-click="$previousStep()">
                           <span class="fa fa-chevron-left"></span>
                           Previous
                       </button>
-                      <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-success pull-right" ng-click="$nextStep()">
+
+                      <!--next button-->
+                      <button ng-if="!$isLast()" ng-disabled="($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-success pull-right" ng-click="$nextStep()">
                           Next
+                          <span class="fa fa-chevron-right"></span>
+                      </button>
+
+                      <!--finish button-->
+                      <button ng-if="$isLast()" ng-disabled="($getActiveStep().hasForm && !$getActiveStep().valid)" class="btn btn-success pull-right" ng-click="$finish()">
+                          Finish
                           <span class="fa fa-chevron-right"></span>
                       </button>
                   </div>

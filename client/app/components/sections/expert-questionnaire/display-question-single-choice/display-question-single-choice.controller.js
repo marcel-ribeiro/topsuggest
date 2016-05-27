@@ -9,41 +9,15 @@ angular.module('app.components.sections.expert-questionnaire.display-question-si
 
   .controller('displayQuestionSingleChoiceController', DisplayQuestionSingleChoiceController);
 
-function DisplayQuestionSingleChoiceController($timeout) {
+function DisplayQuestionSingleChoiceController(question, multiStepFormInstance) {
   var vm = this;
-  vm.test = "scopeTests";
-  vm.beforeReorder = function (e, itemIndex) {
-    if (/no-reorder/.test(e.target.className)) {
-      e.preventDefault();
-    }
-  };
+  vm.question = question;
+  _setInitialValidity();
 
-  vm.beforeSwipe = function (e, itemIndex) {
-    if (/no-swipe/.test(e.target.className)) {
-      e.preventDefault();
-    }
-  };
-
-  vm.beforeWait = function (e, itemIndex) {
-    if (e.target.className.indexOf('instant') > -1) {
-      e.preventDefault();
-    }
-
-  };
-
-  vm.afterSwipe = function (e, itemIndex) {
-    vm.question.choices.splice(itemIndex, 1);
-  };
-
-  vm.reorder = function (e, spliceIndex, originalIndex) {
-
-    $timeout(function () {
-      var listItem = vm.question.choices[originalIndex];
-      vm.question.choices.splice(originalIndex, 1);
-      vm.question.choices.splice(spliceIndex, 0, listItem);
-    }, 50);
-
+  function _setInitialValidity() {
+    var activeStepIndex = multiStepFormInstance.getActiveIndex();
+    multiStepFormInstance.setValidity(true, activeStepIndex);
     return true;
-  };
+  }
 
 }

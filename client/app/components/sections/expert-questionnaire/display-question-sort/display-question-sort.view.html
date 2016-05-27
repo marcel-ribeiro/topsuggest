@@ -1,15 +1,15 @@
 <div class="question-display">
 
-  <h3 class="title">{{displayQuestionSortController.question.question}}</h3>
+  <h3 class="title">{{displayQuestionController.question.question}}</h3>
 
   <ol class="slip-list"
-      slip-before-reorder="displayQuestionSortController.beforeReorder($event, $index)"
-      slip-before-swipe="displayQuestionSortController.beforeSwipe($event, $index)"
-      slip-before-wait="displayQuestionSortController.beforeWait($event, $index)"
-      slip-after-swipe="displayQuestionSortController.afterSwipe($event, $index)"
-      slip-reorder="displayQuestionSortController.reorder($event, $spliceIndex, $originalIndex)">
+      slip-before-reorder="displayQuestionController.beforeReorder($event, $index)"
+      slip-before-swipe="displayQuestionController.beforeSwipe($event, $index)"
+      slip-before-wait="displayQuestionController.beforeWait($event, $index)"
+      slip-after-swipe="displayQuestionController.afterSwipe($event, $index)"
+      slip-reorder="displayQuestionController.reorder($event, $spliceIndex, $originalIndex)">
 
-        <li ng-repeat="choice in displayQuestionSortController.question.choices" class="no-swipe bg-primary">
+        <li ng-repeat="choice in displayQuestionController.question.choices" class="no-swipe bg-primary">
           <i class="fa fa-bars instant"></i>
           {{$index+1}} - [id: {{choice.id}}] {{choice.description}}
         </li>

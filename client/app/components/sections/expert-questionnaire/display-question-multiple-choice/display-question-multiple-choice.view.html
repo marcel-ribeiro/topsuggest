@@ -1,16 +1,16 @@
 <div class="question-display">
-  <h3 class="title">{{displayQuestionMultipleChoiceController.question.question}}</h3>
+  <h3 class="title">{{displayQuestionController.question.question}}</h3>
 
   <form>
     <div class="form-group row" form-step-validity>
       <!--<label class="col-sm-2">Checkbox</label>-->
-      <div class="col-sm-12" ng-repeat="choice in displayQuestionMultipleChoiceController.question.choices">
+      <div class="col-sm-12" ng-repeat="choice in displayQuestionController.question.choices">
         <div class="checkbox">
           <label>
-            <input type="checkbox" name="question-id-{{displayQuestionMultipleChoiceController.question.id}}"
+            <input type="checkbox" name="question-id-{{displayQuestionController.question.id}}"
                    id="choice-id-{{choice.id}}"
                    ng-model="choice.isChecked"
-                   ng-change="displayQuestionMultipleChoiceController.validate()">
+                   ng-change="displayQuestionController.validate()">
             {{choice.description}}
           </label>
         </div>

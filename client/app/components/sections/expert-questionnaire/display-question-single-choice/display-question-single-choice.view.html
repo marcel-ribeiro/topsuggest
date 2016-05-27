@@ -1,8 +1,8 @@
 <div class="question-display">
-  <h3 class="title">{{displayQuestionSingleChoiceController.question.question}}</h3>
+  <h3 class="title">{{displayQuestionController.question.question}}</h3>
 
 
-  <li ng-repeat="choice in displayQuestionSingleChoiceController.question.choices" class="no-swipe bg-primary">
+  <li ng-repeat="choice in displayQuestionController.question.choices" class="no-swipe bg-primary">
     <i class="fa fa-bars instant"></i>
     {{$index+1}} - [id: {{choice.id}}] {{choice.description}}
   </li>

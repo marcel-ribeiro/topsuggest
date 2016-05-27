@@ -22,11 +22,28 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
   function setSteps(result) {
     angular.forEach(result.questions, function (question) {
 
+      var templateUrl = "";
+      var controllerName = "";
+      switch (question.type) {
+        case "SORT":
+          templateUrl = 'components/sections/expert-questionnaire/display-question-sort/display-question-sort.view.html';
+          controllerName = 'displayQuestionSortController';
+          break;
+        case "MULTIPLE_CHOICE":
+          templateUrl = 'components/sections/expert-questionnaire/display-question-multiple-choice/display-question-multiple-choice.view.html';
+          controllerName = 'displayQuestionMultipleChoiceController';
+          break;
+        case "SINGLE_CHOICE":
+          templateUrl = 'components/sections/expert-questionnaire/display-question-single-choice/display-question-single-choice.view.html';
+          controllerName = 'displayQuestionSingleChoiceController';
+          break;
+
+      }
 
       var step = {
-        templateUrl: 'components/sections/expert-questionnaire/display-question/display-question.view.html',
+        templateUrl: templateUrl,
         title: question.id,
-        controller: 'displayQuestionController',
+        controller: controllerName,
         controllerAs: 'displayQuestionController',
         hasForm: true,
         isolatedScope: true,
@@ -35,6 +52,7 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
         }
       };
       _this.steps.push(step);
+
     });
     _this.isStepsLoaded = true;
   }

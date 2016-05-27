@@ -9,39 +9,33 @@ angular.module('app.components.sections.expert-questionnaire.display-question-mu
 
   .controller('displayQuestionMultipleChoiceController', DisplayQuestionMultipleChoiceController);
 
-function DisplayQuestionMultipleChoiceController($timeout) {
+function DisplayQuestionMultipleChoiceController(question, multiStepFormInstance, $timeout) {
   var vm = this;
-  _initChoicesState();
+  vm.question = question;
 
-  vm.validate = function (e) {
-    alert(vm.question);
-    // alert("Event: " + e + "PREFIX_CHECKBOX_NAME= " + PREFIX_CHECKBOX_NAME+vm.question.id);
+  $timeout(function () {
+    _initChoicesState();
+    _setValidity(false);
+  }, 50);
 
+
+  vm.validate = function () {
     for (var choiceIndex = 0; choiceIndex < vm.question.choices.length; choiceIndex++) {
       var choice = vm.question.choices[choiceIndex];
-      console.info("choice=" + choice.id + " isChecked=" + choice.isChecked);
-
-
       if (choice.isChecked) {
-        alert("Form is validated");
+        _setValidity(true);
         return true;
       }
     }
-    alert("Not valid yet!");
+    _setValidity(false);
     return false;
   };
 
-  // // vm.isValid = function(){
-  // //   return true;
-  // // };
-  //
-  //
-  // vm.setValidity = function (isValid, stepIndex) {
-  //   var step = this.steps[(stepIndex || this.activeIndex) - 1];
-  //   if (step) {
-  //     step.valid = isValid;
-  //   }
-  // };
+  function _setValidity(isValid) {
+    var activeStepIndex = multiStepFormInstance.getActiveIndex();
+    multiStepFormInstance.setValidity(isValid, activeStepIndex);
+    return true;
+  }
 
 
   function _initChoicesState() {
