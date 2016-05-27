@@ -1,10 +1,18 @@
 <div class="question-display">
   <h3 class="title">{{displayQuestionController.question.question}}</h3>
 
-
-  <li ng-repeat="choice in displayQuestionController.question.choices" class="no-swipe bg-primary">
-    <i class="fa fa-bars instant"></i>
-    {{$index+1}} - [id: {{choice.id}}] {{choice.description}}
-  </li>
+  <form>
+    <div class="form-group row" form-step-validity>
+      <!--<label class="col-sm-2">Checkbox</label>-->
+      <div class="col-sm-12" ng-repeat="choice in displayQuestionController.question.choices">
+        <div class="checkbox">
+          <label>
+            <input type="radio" name="question-id-{{displayQuestionController.question.id}}" ng-model="displayQuestionController.question.answer" ng-value="choice.id" ng-change="displayQuestionController.validate()">
+            {{choice.description}}
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
 
 </div>

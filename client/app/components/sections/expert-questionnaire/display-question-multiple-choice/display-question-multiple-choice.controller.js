@@ -42,7 +42,6 @@ function DisplayQuestionMultipleChoiceController(question, multiStepFormInstance
     for (var choiceIndex = 0; choiceIndex < vm.question.choices.length; choiceIndex++) {
       var choice = vm.question.choices[choiceIndex];
       choice.isChecked = false;
-      console.info("Setting choice=" + choice.id + " isChecked=" + choice.isChecked);
     }
   }
 

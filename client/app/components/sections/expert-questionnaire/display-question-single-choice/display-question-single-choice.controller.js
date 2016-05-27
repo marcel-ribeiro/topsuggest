@@ -9,15 +9,32 @@ angular.module('app.components.sections.expert-questionnaire.display-question-si
 
   .controller('displayQuestionSingleChoiceController', DisplayQuestionSingleChoiceController);
 
-function DisplayQuestionSingleChoiceController(question, multiStepFormInstance) {
+function DisplayQuestionSingleChoiceController(question, multiStepFormInstance, $timeout) {
   var vm = this;
   vm.question = question;
-  _setInitialValidity();
+  $timeout(function () {
+    _initAnswerState();
+    _setValidity(false);
+  }, 50);
 
-  function _setInitialValidity() {
+
+  vm.validate = function () {
+    if (vm.question.answer) {
+      _setValidity(true);
+      return true;
+    }
+    _setValidity(false);
+    return false;
+  };
+
+  function _setValidity(isValid) {
     var activeStepIndex = multiStepFormInstance.getActiveIndex();
-    multiStepFormInstance.setValidity(true, activeStepIndex);
+    multiStepFormInstance.setValidity(isValid, activeStepIndex);
     return true;
+  }
+
+  function _initAnswerState() {
+    vm.question.answer = null;
   }
 
 }
