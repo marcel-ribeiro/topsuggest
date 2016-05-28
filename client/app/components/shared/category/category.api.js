@@ -6,6 +6,5 @@
 'use strict';
 
 angular.module('app.components.shared.category.api', [
-  'app.components.shared.category.service',
   'app.components.shared.category-resource.factory'
 ]);
