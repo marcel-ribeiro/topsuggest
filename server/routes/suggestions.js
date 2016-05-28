@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-var categories = require("../resources/categories.json");
+var products = require("../resources/products-category-01.json");
 
 
 /* GET categories listing. */
 router.get('/', function (req, res, next) {
-  res.send(categories);
+  res.send(data);
 });
 
 /* GET one category by id. */
@@ -14,7 +14,7 @@ router.get('/:id', function (req, res, next) {
   var category = {};
   var id = req.params.id;
 
-  var list = categories.filter(function (element) {
+  var list = data.filter(function (element) {
     return element.id == id;
   });
 
