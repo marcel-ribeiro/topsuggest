@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var categories = require('./routes/categories');
+var suggestions = require('./routes/suggestions');
 
 var app = express();
 
@@ -14,6 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use('/categories', categories);
+app.use('/suggestions', suggestions);
+
 
 
 //Loads the application from different locations depending on the environment (DEV or PRD)

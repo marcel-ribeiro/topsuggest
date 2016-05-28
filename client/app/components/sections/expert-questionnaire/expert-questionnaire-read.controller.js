@@ -10,10 +10,12 @@ angular.module('app.components.sections.expert-questionnaire-read.controller', [
   .controller('ExpertQuestionnaireReadController', ExpertQuestionnaireReadController);
 
 
-function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams, $http) {
+function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams, $http, $location) {
   var _this = this;
   _this.isStepsLoaded = false;
+  _this.category = {};
   _this.steps = [];
+
   CategoryResourceFactory.get({id: $stateParams.id}).$promise.then(function (result) {
     _this.category = result;
     setSteps(result);
@@ -22,22 +24,24 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
 
   _this.finish = function () {
     alert('Finish has been called. You are going to be redirected home!');
-    // var questionsAnswered = {
-    //   name : "Marcel",
-    //   id: 1
-    //
-    // };
-    // var res = $http.post('/display-suggestion', questionsAnswered);
-    //
-    // res.success(function(data, status, headers, config) {
-    //   _this.questionsAnswered = data;
-    // });
-    //
-    // res.error(function(data, status, headers, config) {
-    //   alert( "failure message: " + JSON.stringify({data: data}));
-    // });
+    var questionsAnswered = {
+      name: "Marcel",
+      categoryId: _this.category.id,
+      category: _this.category
+    };
 
-    // $location.path('/home');
+    var res = $http.post('/suggestions', questionsAnswered);
+
+    res.success(function (data, status, headers, config) {
+      _this.questionsAnswered = data;
+      console.log("Success: " + JSON.stringify(data));
+    });
+
+    res.error(function (data, status, headers, config) {
+      alert("failure message: " + JSON.stringify({data: data}));
+    });
+
+    // $location.path('/display-suggestion');
   };
 
   function setSteps(result) {
