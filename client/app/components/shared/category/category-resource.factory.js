@@ -11,5 +11,5 @@ angular.module('app.components.shared.category-resource.factory', [])
   .factory('CategoryResourceFactory', CategoryResourceFactory);
 
 function CategoryResourceFactory($resource) {
-  return $resource('/category/:id', {id: '@id'});
+  return $resource('/categories/:id', {id: '@id'});
 }

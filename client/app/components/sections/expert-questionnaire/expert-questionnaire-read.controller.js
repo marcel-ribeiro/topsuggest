@@ -10,7 +10,7 @@ angular.module('app.components.sections.expert-questionnaire-read.controller', [
   .controller('ExpertQuestionnaireReadController', ExpertQuestionnaireReadController);
 
 
-function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams) {
+function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams, $http) {
   var _this = this;
   _this.isStepsLoaded = false;
   _this.steps = [];
@@ -18,6 +18,27 @@ function ExpertQuestionnaireReadController(CategoryResourceFactory, $stateParams
     _this.category = result;
     setSteps(result);
   });
+
+
+  _this.finish = function () {
+    alert('Finish has been called. You are going to be redirected home!');
+    // var questionsAnswered = {
+    //   name : "Marcel",
+    //   id: 1
+    //
+    // };
+    // var res = $http.post('/display-suggestion', questionsAnswered);
+    //
+    // res.success(function(data, status, headers, config) {
+    //   _this.questionsAnswered = data;
+    // });
+    //
+    // res.error(function(data, status, headers, config) {
+    //   alert( "failure message: " + JSON.stringify({data: data}));
+    // });
+
+    // $location.path('/home');
+  };
 
   function setSteps(result) {
     angular.forEach(result.questions, function (question) {

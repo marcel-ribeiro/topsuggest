@@ -16,7 +16,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMockE2E',
     'ui.router',
     'ui.scrollpoint',
     'slip',
@@ -102,30 +101,39 @@ angular
             templateUrl: 'components/sections/expert-questionnaire/expert-questionnaire.view.html'
           }
         }
+      })
+
+      .state('display-suggestion', {
+        url: '/display-suggestion',
+        views: {
+          'content': {
+            templateUrl: 'components/sections/display-suggestion/display-suggestion.view.html'
+          }
+        }
       });
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/main');
-  })
-
-  /*
-   * Mocking the backend!
-   * */
-  .run(function ($httpBackend, CategoryService) {
-    //Mock the responses
-    $httpBackend.whenGET(/\/category$/).respond(function (method, url, data) {
-      var items = CategoryService.query();
-      return [200, items, {}];
-    });
-
-    $httpBackend.whenGET(/\/category\/\d+/).respond(function (method, url, data) {
-      // parse the matching URL to pull out the id (/games/:id)
-      var id = url.split('/')[2];
-      var item = CategoryService.get(id);
-      return [200, item, {}];
-    });
-
-    //Execute the actual request in case the request is not in the list of mocked ones
-    $httpBackend.whenGET(/^\w+.*/).passThrough();
-    $httpBackend.whenPOST(/^\w+.*/).passThrough();
   });
+
+// /*
+//  * Mocking the backend!
+//  * */
+// .run(function ($httpBackend, CategoryService) {
+//   //Mock the responses
+//   $httpBackend.whenGET(/\/category$/).respond(function (method, url, data) {
+//     var items = CategoryService.query();
+//     return [200, items, {}];
+//   });
+//
+//   $httpBackend.whenGET(/\/category\/\d+/).respond(function (method, url, data) {
+//     // parse the matching URL to pull out the id (/games/:id)
+//     var id = url.split('/')[2];
+//     var item = CategoryService.get(id);
+//     return [200, item, {}];
+//   });
+//
+//   //Execute the actual request in case the request is not in the list of mocked ones
+//   $httpBackend.whenGET(/^\w+.*/).passThrough();
+//   $httpBackend.whenPOST(/^\w+.*/).passThrough();
+// });

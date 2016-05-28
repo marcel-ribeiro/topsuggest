@@ -2,7 +2,8 @@
   <div class="container">
     <multi-step-container steps="expertQuestionnaire.steps" ng-if='expertQuestionnaire.steps.length'
                           class="sliding-steps simple-prev-next"
-                          search-id="'check'">
+                          search-id="'check'"
+                          on-finish="expertQuestionnaire.finish()">
 
       <div class="panel panel-primary">
             <div class="panel-heading">
@@ -13,6 +14,7 @@
             <div class="panel-body">
 
                   <main step-container></main>
+
 
                   <div class="multi-step-container-footer">
 
@@ -34,6 +36,10 @@
                           <span class="fa fa-chevron-right"></span>
                       </button>
                   </div>
+
+              <div style="background-color: #00d6b2">
+                {{expertQuestionnaire.questionsAnswered}}
+              </div>
 
 
             </div><!--end:panel-body-->
